@@ -80,9 +80,9 @@ If you find this useful, consider supporting [freeCodeCamp](https://www.freecode
 
 ## License
 
-Copyright © 2014 freeCodeCamp.org
+Copyright © 2014 [freeCodeCamp.org](https://www.freecodecamp.org)
 
 The content of this repository is bound by the following licenses:
 
 - The computer software is licensed under the [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause) license.
-- The curriculum content is copyright © 2014 freeCodeCamp.org
+- The curriculum content is copyright © 2014 [freeCodeCamp.org](https://www.freecodecamp.org)
