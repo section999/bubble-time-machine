@@ -1,6 +1,6 @@
 # Bubble Time Machine
 
-An interactive educational website exploring Japan's bubble economy era (1985–1991) through music, anime, aesthetics, economics, and daily life.
+An educational website exploring Japan's bubble economy era (1985–1991) through music, anime, aesthetics, economics, and daily life.
 
 ---
 
