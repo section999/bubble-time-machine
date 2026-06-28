@@ -1,0 +1,13 @@
+# API keys — never commit these
+.env
+.env.local
+.env.*.local
+
+# Editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log

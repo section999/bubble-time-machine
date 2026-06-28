@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:en.m.wikipedia.org)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.flickr.com)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:picryl.com)",
+      "WebFetch(domain:rarehistoricalphotos.com)",
+      "WebFetch(domain:api.wikimedia.org)",
+      "WebFetch(domain:openverse.org)",
+      "WebFetch(domain:api.openverse.org)"
+    ]
+  }
+}

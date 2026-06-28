@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bubble Time Machine — Japan's Economic Miracle 1985–1991</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════ NAV ════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-left">
+      <button class="nav-icon-btn" id="dashboardBtn" aria-label="Open dashboard">&#9776;</button>
+    </div>
+    <div class="nav-brand">
+      <span class="nav-brand-white">Bubble</span><span class="nav-brand-yellow"> Time Machine</span>
+    </div>
+    <div class="nav-right">
+      <a class="nav-icon-btn nav-icon-btn--heart" href="https://www.freecodecamp.org/donate/" target="_blank" rel="noopener noreferrer" aria-label="Support freeCodeCamp">&#10084;</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════ DASHBOARD ════════════════════ -->
+  <div class="dashboard-overlay" id="dashboardOverlay"></div>
+  <aside class="dashboard-panel" id="dashboardPanel" aria-label="Progress dashboard">
+    <div class="dashboard-header">
+      <span class="dashboard-title">// save progress</span>
+      <button class="dashboard-close" id="dashboardClose" aria-label="Close dashboard">&#10005;</button>
+    </div>
+    <div class="dashboard-body">
+
+      <div class="dashboard-section">
+        <div class="dashboard-section-label">Your name</div>
+        <div class="dashboard-name-row">
+          <input class="dashboard-input" id="userName" type="text" placeholder="Enter" maxlength="40" />
+          <button class="dashboard-btn-sm" id="saveNameBtn">Save</button>
+        </div>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="dashboard-section-label">Progress</div>
+        <div id="progressList"></div>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="dashboard-section-label">Actions</div>
+        <div class="action-group">
+          <button class="action-row" id="exportBtn">
+            <span class="action-row-icon">&#8595;</span>
+            <span>Export Progress</span>
+          </button>
+          <button class="action-row" id="importBtn">
+            <span class="action-row-icon">&#8593;</span>
+            <span>Import Progress</span>
+          </button>
+        </div>
+        <input type="file" id="importFile" accept=".json" style="display:none" />
+        <button class="action-reset" id="resetBtn">Reset all progress</button>
+      </div>
+
+      <p class="dashboard-note">Progress is stored in this browser only. Use Export / Import to move it across devices.</p>
+
+    </div>
+  </aside>
+
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero" id="heroSection" aria-label="Year overview">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-year" id="heroYear" aria-live="polite">1988</div>
+        <div class="hero-mood" id="heroMood">Japan at peak bubble. The Nikkei keeps climbing and City Pop is on every FM radio.</div>
+        <p class="hero-sub" id="heroSub">Salarymen are taking taxis home at midnight without checking the meter. Record labels are spending freely on artists nobody's heard of yet. Everything feels like it will last forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ TIMELINE + ENTRY POINTS ════════════════════ -->
+  <section class="timeline-section" aria-labelledby="entryLabel">
+    <div class="timeline-wrap">
+      <p class="entry-label" id="entryLabel">Where do you want to start?</p>
+      <div class="timeline-nodes" id="yearSelector" role="group" aria-label="Select a year">
+        <!-- Built by app.js -->
+      </div>
+      <div class="entry-grid" id="entryGrid" role="list">
+        <!-- Built by app.js -->
+      </div>
+    </div>
+  </section>
+
+
+<!-- ════════════════════ CONTENT AREA ════════════════════ -->
+  <main class="content-area" id="contentArea" hidden aria-label="Content">
+
+    <!-- Left column -->
+    <div class="content-left">
+
+      <div class="section-nav">
+        <button class="section-arrow" id="prevSection" aria-label="Previous section">&#8592;</button>
+        <span class="section-counter" id="sectionCounter"></span>
+        <button class="section-arrow" id="nextSection" aria-label="Next section">&#8594;</button>
+      </div>
+
+      <h2 class="content-title" id="contentTitle"></h2>
+
+      <div class="section-body">
+        <p class="section-text" id="sectionText"></p>
+      </div>
+
+    </div>
+
+    <!-- Right column / sidebar -->
+    <aside class="content-right" aria-label="Context sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">The chain of events</div>
+        <div class="chain" id="causalChain" role="list" aria-label="Cause and effect chain">
+
+          <div class="chain-phase">The trigger</div>
+          <div class="chain-node chain-node--economic" data-node="plaza-accord" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Plaza Accord (1985)</div>
+          </div>
+
+          <div class="chain-phase">The mechanism</div>
+          <div class="chain-node chain-node--economic" data-node="yen" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Yen appreciates sharply</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="boj-rates" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Bank of Japan cuts rates</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="cheap-money" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Cheap money floods the market</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="asset-surge" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Land and stock prices surge</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="wealth-effect" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">The wealth effect</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="spending" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Consumer spending explodes</div>
+          </div>
+
+          <div class="chain-phase">The culture</div>
+          <div class="chain-node chain-node--cultural chain-node--indented" data-node="music" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">City Pop & FM culture</div>
+          </div>
+          <div class="chain-node chain-node--cultural chain-node--indented" data-node="anime" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Anime & OVA boom</div>
+          </div>
+          <div class="chain-node chain-node--cultural chain-node--indented" data-node="aesthetic" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Luxury fashion & design</div>
+          </div>
+          <div class="chain-node chain-node--cultural chain-node--indented" data-node="real-estate" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Real estate speculation</div>
+          </div>
+
+          <div class="chain-phase">The collapse</div>
+          <div class="chain-node chain-node--economic" data-node="tightening" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Policy tightening (1989–1990)</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="collapse" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">Asset prices collapse (1991)</div>
+          </div>
+          <div class="chain-connector" aria-hidden="true"></div>
+          <div class="chain-node chain-node--economic" data-node="lost-decade" role="listitem">
+            <div class="chain-dot"></div>
+            <div class="chain-text">The Lost Decade begins</div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </aside>
+
+  </main>
+
+  <script src="data/content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
