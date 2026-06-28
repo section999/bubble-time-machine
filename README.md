@@ -75,3 +75,14 @@ data/content.js   — all content: CONTENT, ENTRY_POINTS, ENTRY_SECTIONS
 ## Support
 
 If you find this useful, consider supporting [freeCodeCamp](https://www.freecodecamp.org/donate/) — the design system this project is built on.
+
+---
+
+## License
+
+Copyright © 2014 freeCodeCamp.org
+
+The content of this repository is bound by the following licenses:
+
+- The computer software is licensed under the [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause) license.
+- The curriculum content is copyright © 2014 freeCodeCamp.org
