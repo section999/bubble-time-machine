@@ -30,6 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (state.sectionIndex < sections.length - 1) { state.sectionIndex++; renderSection(); }
   });
 
+  // Keyboard section navigation
+  document.addEventListener("keydown", e => {
+    if (document.getElementById("contentArea").hidden) return;
+    if (document.activeElement.tagName === "INPUT") return;
+    if (e.key === "ArrowLeft") {
+      if (state.sectionIndex > 0) { state.sectionIndex--; renderSection(); }
+    } else if (e.key === "ArrowRight") {
+      const sections = ENTRY_SECTIONS[state.entryPoint] || [];
+      if (state.sectionIndex < sections.length - 1) { state.sectionIndex++; renderSection(); }
+    }
+  });
+
   // Dashboard
   document.getElementById("dashboardBtn").addEventListener("click", openDashboard);
   document.getElementById("dashboardClose").addEventListener("click", closeDashboard);
@@ -162,13 +174,38 @@ function renderSection() {
   const s = sections[state.sectionIndex];
   if (!s) return;
 
-  document.getElementById("contentTitle").textContent = s.title;
-  document.getElementById("sectionText").textContent  = s.body;
+  const titleEl = document.getElementById("contentTitle");
+  const textEl  = document.getElementById("sectionText");
+
+  // Fade out
+  titleEl.style.opacity = "0";
+  textEl.style.opacity  = "0";
+
+  setTimeout(() => {
+    titleEl.textContent = s.title;
+    textEl.textContent  = s.body;
+    titleEl.style.opacity = "1";
+    textEl.style.opacity  = "1";
+  }, 140);
+
+  // Counter
   document.getElementById("sectionCounter").textContent =
     `${state.sectionIndex + 1} / ${sections.length}`;
 
+  // Arrow states
   document.getElementById("prevSection").disabled = state.sectionIndex === 0;
   document.getElementById("nextSection").disabled = state.sectionIndex === sections.length - 1;
+
+  // Reading progress bar
+  const pct = ((state.sectionIndex + 1) / sections.length) * 100;
+  document.getElementById("readingProgressFill").style.width = `${pct}%`;
+
+  // Breadcrumb
+  const ep = ENTRY_POINTS.find(e => e.id === state.entryPoint);
+  if (ep) {
+    document.getElementById("contentBreadcrumb").textContent =
+      `${ep.icon}  ${ep.title}  ·  ${state.year}`;
+  }
 
   updateChain(s.chainActive || []);
   trackSection();

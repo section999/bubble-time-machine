@@ -404,12 +404,38 @@ body {
   white-space: nowrap;
 }
 
+/* Reading progress bar */
+.reading-progress-bar {
+  height: 2px;
+  background: var(--bg-tertiary);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.reading-progress-fill {
+  height: 100%;
+  background: var(--accent-yellow);
+  border-radius: 1px;
+  width: 0%;
+  transition: width 0.35s ease;
+}
+
+/* Breadcrumb */
+.content-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
 .content-title {
   font-family: var(--font-mono);
   font-size: clamp(1.1rem, 2.3vw, 1.4rem);
   font-weight: bold;
   color: var(--text-primary);
   line-height: 1.3;
+  transition: opacity 0.15s ease;
 }
 
 .section-text {
@@ -417,6 +443,7 @@ body {
   font-size: 0.95rem;
   color: var(--text-body);
   line-height: 1.85;
+  transition: opacity 0.15s ease;
 }
 
 
@@ -531,34 +558,6 @@ body {
 .sidebar-divider {
   border: none;
   border-top: 1px solid var(--border);
-}
-
-/* ── So What ── */
-.so-what {
-  background: rgba(172, 209, 87, 0.05);
-  border: 1px solid rgba(172, 209, 87, 0.18);
-  border-left: 3px solid var(--accent-green);
-  border-radius: var(--radius);
-  padding: 1rem 1rem 1rem 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.so-what-label {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: bold;
-  color: var(--accent-green);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.so-what-body {
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  color: var(--text-body);
-  line-height: 1.75;
 }
 
 
