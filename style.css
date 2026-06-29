@@ -222,17 +222,6 @@ body {
   text-align: center;
 }
 
-.hero-mood {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-sub {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 .hero-year {
   font-family: var(--font-mono);
   font-size: clamp(4rem, 12vw, 7.5rem);
@@ -247,7 +236,7 @@ body {
   font-family: var(--font-mono);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin: 0 auto 0.75rem;
   max-width: 680px;
 }
 
@@ -255,6 +244,7 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--text-muted);
+  margin: 0 auto;
   max-width: 620px;
   line-height: 1.75;
 }
@@ -347,18 +337,6 @@ body {
   font-size: 0.75rem;
   color: var(--text-muted);
   line-height: 1.4;
-}
-
-/* ════════════════════ CONTENT PROMPT ════════════════════ */
-
-.content-prompt {
-  max-width: var(--max-width);
-  margin: 3rem auto;
-  padding: 0 2rem;
-  text-align: center;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
 }
 
 /* ════════════════════ CONTENT AREA ════════════════════ */
@@ -585,12 +563,6 @@ body {
   background: var(--border);
   margin-left: 4px;
   flex-shrink: 0;
-}
-
-/* ── Sidebar divider ── */
-.sidebar-divider {
-  border: none;
-  border-top: 1px solid var(--border);
 }
 
 
@@ -907,10 +879,6 @@ body {
   .content-area {
     padding: 2rem 1.25rem;
   }
-
-  .content-prompt {
-    padding: 0 1.25rem;
-  }
 }
 
 /* ── Mobile (≤ 480px) ── */
@@ -992,11 +960,6 @@ body {
   /* Content area */
   .content-area {
     padding: 1.5rem 1rem;
-  }
-
-  .content-prompt {
-    margin: 2rem auto;
-    padding: 0 1rem;
   }
 
   /* Section nav arrows: larger touch targets */
