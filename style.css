@@ -910,11 +910,15 @@ body {
   .timeline-nodes {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-top: 0.6rem;
+    padding-top: 1rem;
     padding-bottom: 0.25rem;
     /* Remove gap inconsistency */
     justify-content: flex-start;
     gap: 0;
+  }
+
+  .timeline-nodes::before {
+    top: calc(1rem + 6px);
   }
 
   /* Each node gets a fixed minimum width so they stay readable */
