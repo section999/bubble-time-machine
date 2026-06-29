@@ -907,12 +907,17 @@ body {
     padding: 0 1rem;
   }
 
-  .timeline-nodes {
+  /* Scroll container moves to wrap so timeline-nodes has no overflow,
+     preventing the forced overflow-y:hidden that clips the active dot */
+  .timeline-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .timeline-nodes {
+    min-width: max-content;
     padding-top: 1rem;
-    padding-bottom: 0.25rem;
-    /* Remove gap inconsistency */
     justify-content: flex-start;
     gap: 0;
   }
