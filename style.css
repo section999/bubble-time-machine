@@ -905,12 +905,12 @@ body {
   /* Timeline: allow horizontal scroll on tiny screens */
   .timeline-section {
     padding: 0 1rem;
-    overflow-x: hidden;
   }
 
   .timeline-nodes {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding-top: 0.6rem;
     padding-bottom: 0.25rem;
     /* Remove gap inconsistency */
     justify-content: flex-start;

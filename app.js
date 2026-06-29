@@ -278,6 +278,15 @@ function saveDashboardName() {
   const save = loadSave();
   save.name = name;
   writeSave(save);
+
+  const btn = document.getElementById("saveNameBtn");
+  const original = btn.textContent;
+  btn.textContent = "Saved!";
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.disabled = false;
+  }, 1500);
 }
 
 function exportProgress() {
