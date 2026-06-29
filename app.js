@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (state.sectionIndex > 0) { state.sectionIndex--; renderSection(); }
   });
   document.getElementById("nextSection").addEventListener("click", () => {
-    const sections = ENTRY_SECTIONS[state.entryPoint] || [];
+    const sections = (ENTRY_SECTIONS[state.entryPoint] || {})[state.year] || [];
     if (state.sectionIndex < sections.length - 1) { state.sectionIndex++; renderSection(); }
   });
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowLeft") {
       if (state.sectionIndex > 0) { state.sectionIndex--; renderSection(); }
     } else if (e.key === "ArrowRight") {
-      const sections = ENTRY_SECTIONS[state.entryPoint] || [];
+      const sections = (ENTRY_SECTIONS[state.entryPoint] || {})[state.year] || [];
       if (state.sectionIndex < sections.length - 1) { state.sectionIndex++; renderSection(); }
     }
   });
@@ -78,6 +78,7 @@ function buildYearSelector() {
 
 function setYear(year) {
   state.year = year;
+  state.sectionIndex = 0;
 
   // Update active node
   document.querySelectorAll(".timeline-node").forEach(node => {
@@ -168,7 +169,9 @@ function showContentArea() {
 }
 
 function renderSection() {
-  const sections = ENTRY_SECTIONS[state.entryPoint];
+  const yearSections = ENTRY_SECTIONS[state.entryPoint];
+  if (!yearSections) return;
+  const sections = yearSections[state.year];
   if (!sections) return;
 
   const s = sections[state.sectionIndex];
@@ -233,10 +236,11 @@ function trackSection() {
   if (!state.entryPoint) return;
   const save = loadSave();
   if (!save.progress) save.progress = {};
-  const prev = save.progress[state.entryPoint] || 0;
+  const key = `${state.entryPoint}_${state.year}`;
+  const prev = save.progress[key] || 0;
   const reached = state.sectionIndex + 1;
   if (reached > prev) {
-    save.progress[state.entryPoint] = reached;
+    save.progress[key] = reached;
     writeSave(save);
   }
 }
@@ -257,10 +261,11 @@ function closeDashboard() {
 function renderProgressList() {
   const progress = (loadSave().progress) || {};
   const list = document.getElementById("progressList");
-  const total = 20;
   list.innerHTML = "";
   ENTRY_POINTS.forEach(ep => {
-    const reached = progress[ep.id] || 0;
+    const yearData = ENTRY_SECTIONS[ep.id];
+    const total = Object.values(yearData).reduce((sum, arr) => sum + arr.length, 0);
+    const reached = YEARS.reduce((sum, y) => sum + (progress[`${ep.id}_${y}`] || 0), 0);
     const pct = Math.round((reached / total) * 100);
     const item = document.createElement("div");
     item.className = "progress-item";

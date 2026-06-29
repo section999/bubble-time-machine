@@ -43,527 +43,807 @@ const ENTRY_POINTS = [
   { id: "daily-life", icon: "🏠", title: "Daily Life", sub: "What it felt like" },
 ];
 
-/* ── Deep-dive sections: 20 per entry point ── */
+/* ── Deep-dive sections: 4 per year per entry point ── */
 const ENTRY_SECTIONS = {
 
-  /* ══════════════ MUSIC ══════════════ */
-  music: [
-    {
-      title: "What Is City Pop?",
-      body: "City Pop is a loosely defined Japanese popular music genre that flourished primarily between the late 1970s and early 1990s. Built on jazz-funk rhythms, smooth electric bass, lush synthesizer textures, and intricate chord progressions borrowed from American soul and AOR, it was the sound of Japan's new affluent urban class. The term itself came later — at the time it was simply contemporary pop for people who lived in, or aspired to, city life. Its characteristic mood: aspirational, warm, and slightly melancholic, like a drive along a coastal expressway at dusk.",
-      chainActive: ["wealth-effect", "spending", "music"],
-    },
-    {
-      title: "Origins: Jazz Kissaten and American Influence",
-      body: "The roots of City Pop lie in Japan's postwar fascination with American music. Jazz kissaten — coffee shops built around recorded jazz — cultivated a generation of listeners with sophisticated ears. By the early 1970s, artists like Haruomi Hosono began experimenting with American funk and soul, blending them with Japanese sensibilities. The result was something that absorbed Black American musical structures while creating an entirely new emotional register. This wasn't imitation — it was transformation, producing a hybrid sound with no real American equivalent and a distinctly Japanese emotional temperature.",
-      chainActive: ["music"],
-    },
-    {
-      title: "The FM Radio Revolution",
-      body: "The expansion of FM broadcasting in Japan during the late 1970s was decisive for City Pop's reach. FM offered higher audio fidelity than AM, and Japanese radio stations programmed it accordingly: smooth, well-produced music that showcased the format's quality. Listeners bought high-end stereo equipment to hear the difference. City Pop — complex, studio-crafted, sonically rich — was the ideal FM music. Late-night programs turned jazz-funk hybrids into the shared soundtrack of urban Japan. FM radio didn't just broadcast City Pop; it created the audience for it and defined the conditions under which it would be heard.",
-      chainActive: ["music", "spending"],
-    },
-    {
-      title: "Tatsuro Yamashita",
-      body: "Tatsuro Yamashita is the central figure of City Pop — the artist most responsible for defining its sound, its emotional register, and its commercial viability. His 1980 album Ride on Time established City Pop as a genre unto itself, and his song Christmas Eve (1983) became Japan's bestselling single for thirteen consecutive years. Yamashita was a perfectionist producer as well as a performer, layering vocals with technical precision and building arrangements of considerable sophistication. He understood music as architecture — every element placed deliberately, nothing wasted. His career spans the entire bubble era and survives it.",
-      chainActive: ["music", "wealth-effect"],
-    },
-    {
-      title: "Mariya Takeuchi and Plastic Love",
-      body: "In 1984, Mariya Takeuchi released Plastic Love — a sophisticated disco-inflected track initially released as a B-side. It went largely unnoticed for decades until 2017, when YouTube's recommendation algorithm surfaced it to an international audience with no context for Japanese bubble-era pop. The response was immediate and overwhelming. Plastic Love became one of the most discussed musical rediscoveries in online culture, prompting global attention to City Pop as a genre. The song's themes — performing love without feeling it — resonated across cultural contexts in ways Takeuchi could not have predicted when she recorded it.",
-      chainActive: ["music"],
-    },
-    {
-      title: "Anri and the Beach Sound",
-      body: "Anri represented a distinct strand of City Pop: the summer-inflected beach sound that connected music to leisure, resort culture, and physical aspiration. Her 1983 album Timely! and the breakout track Shyness Boy established a template — high-production-value pop with Caribbean-influenced lightness that perfectly suited the imagery of Japan's new luxury leisure culture. Anri scored consecutive number-one albums during the bubble years. Her music mapped directly onto the lifestyle aspirations the bubble made briefly possible for a broad urban population: holidays, coastal drives, the particular warmth of prosperity that expects to last.",
-      chainActive: ["music", "spending", "wealth-effect"],
-    },
-    {
-      title: "The Session Musicians",
-      body: "Much of City Pop's sonic identity was produced not by the credited artists but by a core of elite session musicians who played on dozens of recordings across the era. These were players with jazz training, technical facility, and an ear for the subtle groove that City Pop required. The session system — borrowed from American studio culture — meant that albums could be assembled with extraordinary efficiency and consistency. It also meant that the sound of an era was, in a significant sense, the sound of a particular group of perhaps thirty working musicians, playing on everything.",
-      chainActive: ["music"],
-    },
-    {
-      title: "Record Label Economics in the Bubble",
-      body: "What the bubble era bought in music was primarily time and experimentation. Major labels — Sony Music, Pony Canyon, Toshiba-EMI — could afford to fund elaborate studio sessions, top-tier session musicians, and costly production processes without demanding immediate returns. A-and-R budgets grew alongside corporate entertainment spending. Artists were given creative latitude that would have been unusual in more financially constrained periods. This freedom showed in the music: City Pop at its peak was technically and sonically sophisticated in ways that required both talent and serious investment. The bubble didn't create the creativity — it funded its realization.",
-      chainActive: ["cheap-money", "spending", "music"],
-    },
-    {
-      title: "The Cassette Tape and the Personal Stereo",
-      body: "Sony's Walkman, launched in 1979, transformed the relationship between music and urban movement. The cassette tape became the primary format for personal music consumption through the 1980s, and City Pop was perfectly suited to it: music designed for sustained listening, for commutes, for background presence during focused activity. Listeners compiled mix-tapes with a seriousness that anticipated playlist culture. The portability of the Walkman also connected City Pop physically to the urban environments it described — music that could accompany you through the city it sang about, the soundtrack arriving at exactly the right moment in exactly the right street.",
-      chainActive: ["spending", "music"],
-    },
-    {
-      title: "Music Videos and Visual Culture",
-      body: "Japanese music television and the growing format of music videos brought City Pop into dialogue with fashion, advertising, and lifestyle imagery. Artists appeared in stylized settings — coastal drives, rooftop bars, nighttime Tokyo — reinforcing the music's aspirational geography. The visual codes borrowed from European fashion photography and American cinema while remaining distinctly Japanese in their emotional restraint. The music video connected City Pop to consumer culture in ways that made the genre inseparable from the bubble's visual aesthetic. Fashion and music fed each other through shared imagery, shared performers, and the same designers working across both industries.",
-      chainActive: ["spending", "aesthetic", "music"],
-    },
-    {
-      title: "The Nightclub Scene",
-      body: "City Pop existed not just on record and radio but live, in the clubs and venues that defined Tokyo's nightlife during the bubble. Discos and dance clubs played City Pop alongside imported funk and dance music. The live scene connected the music to its social context: young urban professionals with disposable income, entertainment budgets that extended to repeated nights out, and a culture of leisure that supported a rich live music economy. City Pop was both recorded artifact and social lubricant — the music you heard in the background of the evenings you'd later remember as the best of your life.",
-      chainActive: ["spending", "wealth-effect", "music"],
-    },
-    {
-      title: "The CD Revolution",
-      body: "The compact disc arrived in Japan in 1982 — earlier than anywhere else — and its adoption was rapid and total. By the late 1980s, CD had largely replaced vinyl for mainstream releases. The format change mattered for City Pop in complex ways: the sonic character of the music — its warmth, its slight imprecision, its analog depth — was partially changed by digital reproduction. But CD also extended the music's commercial life, as consumers repurchased on the new format albums they had already bought on vinyl. The bubble economy provided the discretionary income to make this secondary purchasing comfortable.",
-      chainActive: ["spending", "music"],
-    },
-    {
-      title: "Why City Pop Didn't Travel in Its Time",
-      body: "City Pop had limited international reach during its original run. Japanese music faced significant barriers: language, distribution networks, and a cultural assumption in Western markets that domestic Japanese pop had no global relevance. Some artists found audiences in Southeast Asian markets with established Japanese cultural pathways. City Pop compilations circulated among specialist record collectors in Europe and America, but the genre's international presence was negligible compared to its domestic weight. The disconnect between its quality and its international obscurity would only become apparent decades later, when digital distribution finally removed the barriers that geography and commercial infrastructure had maintained.",
-      chainActive: ["music"],
-    },
-    {
-      title: "Why City Pop Ended",
-      body: "City Pop did not survive the bubble primarily for economic reasons. Record labels cut A-and-R budgets as corporate entertainment spending contracted. Production costs that had been absorbed easily during the bubble years became difficult to justify in the early 1990s. Simultaneously, the national mood shifted: Japan was anxious rather than aspirational, cautious rather than expansive. The music that replaced City Pop — J-Pop, quieter singer-songwriter work — reflected a deflated cultural temperature. City Pop's confidence required a particular economic environment. When the environment changed, the confidence evaporated, and the expensive, sophisticated production style went with it.",
-      chainActive: ["tightening", "collapse", "music"],
-    },
-    {
-      title: "J-Pop and What Replaced City Pop",
-      body: "The genre that replaced City Pop — loosely called J-Pop — was smoother, less harmonically adventurous, and more accessible to mass markets. Artists like Mr. Children and SMAP dominated the 1990s. Production values remained high, but the textural complexity of prime City Pop gave way to more direct, less demanding structures. J-Pop was also more explicitly connected to media tie-ins — anime soundtracks, television dramas — reflecting the consolidation of Japan's entertainment industry under shared commercial logic. City Pop had been a luxury; J-Pop was efficient. The transition was not a fall in quality so much as a shift in ambition.",
-      chainActive: ["collapse", "lost-decade", "music"],
-    },
-    {
-      title: "The YouTube Algorithm and the 2017 Discovery",
-      body: "The rediscovery of City Pop internationally traces primarily to a specific YouTube behavior: the algorithm's tendency to surface unexpected content through recommendation chains. Users following American R&B or jazz-funk playlists would encounter Japanese music from the 1980s — well-produced, emotionally legible, sonically sophisticated. Channels dedicated to City Pop accumulated millions of views by 2018-2019. This was not a marketing campaign or deliberate cultural strategy — it was the emergent behavior of a recommendation system applied to a global music archive that suddenly included decades of previously inaccessible Japanese recordings. No label executive planned it. The algorithm found it.",
-      chainActive: ["music"],
-    },
-    {
-      title: "Plastic Love: The Anatomy of a Viral Moment",
-      body: "Mariya Takeuchi's Plastic Love became the center of the international City Pop moment in a way that reveals how cultural rediscovery works online. The song was uploaded repeatedly across multiple channels, generating tens of millions of views and thousands of comments from listeners across different countries and languages. YouTube comments on the video became a form of spontaneous criticism and community formation: people sharing what the song meant to them, what it reminded them of, how it connected to experiences they had never lived. The song transcended its original context entirely, becoming a vessel for feelings its maker had encoded into its surfaces in 1984.",
-      chainActive: ["music"],
-    },
-    {
-      title: "Vaporwave and the Aesthetic Inheritance",
-      body: "Vaporwave — an internet-born microgenre of the early 2010s — explicitly sampled and referenced City Pop alongside smooth jazz and corporate elevator music. The genre's aesthetic of nostalgic irony repurposed City Pop textures into something new: a commentary on consumer culture and digital alienation. Artists treated City Pop samples not as nostalgia objects but as raw material. This gave City Pop a second life in contexts its original creators could not have imagined, extending its cultural reach through genres that emerged after the internet made all recorded music equally accessible regardless of original language or commercial territory.",
-      chainActive: ["music"],
-    },
-    {
-      title: "City Pop's Influence on Contemporary Music",
-      body: "City Pop's influence is audible in contemporary production across multiple genres. The textural complexity, harmonic sophistication, and emotional warmth that characterized its peak are audible in a significant portion of K-Pop's production vocabulary and in a strand of American R&B production. The Japanese session musician aesthetic — meticulous, layered, emotionally precise — has become a template that producers return to repeatedly. The genre's legacy is not merely nostalgic; it is technical and structural, a model of what well-produced music can achieve when given sufficient resources, genuine creative ambition, and a culture that takes listening seriously.",
-      chainActive: ["music"],
-    },
-    {
-      title: "What City Pop Tells Us About Bubbles",
-      body: "City Pop's arc — emergence, peak, disappearance, rediscovery — maps onto the bubble economy's arc so precisely that the music functions as an unintentional document of a specific economic moment. The music's confidence, its investment in sonic richness, its assumption that the listener has time and attention and equipment good enough to appreciate complexity — all of this reflects a society briefly convinced of its own permanence. The melancholy that listeners detect in City Pop, even in its most upbeat recordings, may be the melancholy of something made to last in a moment that didn't. That tension is why the music still works.",
-      chainActive: ["wealth-effect", "spending", "music", "collapse"],
-    },
-  ],
+  /* ══════════════════════════════════════
+     MUSIC
+  ══════════════════════════════════════ */
+  music: {
+    "1985": [
+      {
+        title: "City Pop Crystallizes",
+        body: "By 1985 City Pop is no longer an experimental genre — it is the sound of urban Japan. Tatsuro Yamashita's Christmas Eve has become a year-end radio institution. The genre's characteristic elements — jazz-funk rhythms, synthesizer warmth, smooth electric bass, aspirational imagery — are fully formed. FM radio expansion across the decade has built an audience calibrated to appreciate sophisticated production. The music and its listeners have grown up together.",
+        chainActive: ["music", "spending"],
+      },
+      {
+        title: "Tatsuro Yamashita at the Center",
+        body: "Yamashita is the producer-artist who defines City Pop's quality standard in 1985. His studio perfectionism — multilayered vocals, precisely engineered arrangements, music that rewards close listening on good equipment — sets the bar that other labels and artists aspire to. His commercial success demonstrates that sophistication and popularity are not in conflict. The example he provides shapes what the entire genre attempts.",
+        chainActive: ["music"],
+      },
+      {
+        title: "FM Radio as Cultural Infrastructure",
+        body: "FM broadcasting in Japan is expanding rapidly in 1985, and City Pop is its ideal programming. The format's high audio fidelity rewards well-produced, complex music. Late-night FM programs turn jazz-funk hybrids into the shared soundtrack of urban Japan. Listeners are investing in quality stereo equipment to hear the difference. The radio station, the equipment manufacturer, and the record label are participating in the same ecosystem of aspiration.",
+        chainActive: ["music", "wealth-effect"],
+      },
+      {
+        title: "The Session Musician Infrastructure",
+        body: "Much of City Pop's sonic consistency comes from a core group of roughly thirty elite session musicians available to major labels. These are players with jazz training, technical facility, and an ear for the particular groove the genre requires. A listener hearing multiple City Pop albums from 1985 is often hearing the same dozen players on each. This shared personnel creates coherence across artists and labels — City Pop sounds like itself because the same hands are making it.",
+        chainActive: ["music"],
+      },
+    ],
+    "1986": [
+      {
+        title: "Label Budgets Expand with Cheap Money",
+        body: "The Bank of Japan's rate cuts in 1986 flow through the economy in ways that reach the music industry. Major labels affiliated with consumer electronics conglomerates find their parent companies in robust financial shape despite the export slowdown. A-and-R budgets expand. The willingness to fund projects without immediate commercial certainty increases. Music that requires expensive studio time and large session rosters becomes easier to justify.",
+        chainActive: ["boj-rates", "cheap-money", "music"],
+      },
+      {
+        title: "Taeko Ohnuki and Sophistication",
+        body: "Taeko Ohnuki represents City Pop's most intellectually ambitious strand in 1986. Her arrangements incorporate jazz harmony, French pop influence, and a willingness to subordinate commercial accessibility to artistic interest. The bubble era's A-and-R culture can afford to fund work like this. Ohnuki's albums sell respectably without dominating charts — a performance that would have been commercially unsustainable in a tighter industry.",
+        chainActive: ["music"],
+      },
+      {
+        title: "Omega Tribe and the Resort Sound",
+        body: "Carlos Toshiki's Omega Tribe establishes in 1986 a lighter, breezier strand of City Pop directly connected to leisure and resort culture. Their music is about weekends — coastal drives, beach resorts, the aspirational geography of the newly affluent Japanese middle class. The sound is less harmonically ambitious than Yamashita's but precisely calibrated to the lifestyle imagery the bubble is producing. It sells to people who are living, or aspiring to live, the life it describes.",
+        chainActive: ["music", "spending", "wealth-effect"],
+      },
+      {
+        title: "Tower Records and Import Culture",
+        body: "Tower Records' Shibuya flagship has become a cultural institution by 1986. Japanese consumers are buying American imports — Steely Dan, Anita Baker, Luther Vandross — with enthusiasm funded by a strong yen and rising disposable incomes. The imports both inspire domestic artists and establish a quality benchmark for what sophisticated listeners expect. City Pop exists in productive dialogue with its American sources, absorbing influences and transforming them into something distinctly Japanese.",
+        chainActive: ["spending", "music"],
+      },
+    ],
+    "1987": [
+      {
+        title: "The CD and the Repurchase Market",
+        body: "Japan adopts the compact disc format more rapidly than any other market. By 1987 major releases are primarily on CD, and consumers with discretionary income are repurchasing vinyl catalogs in the new format. City Pop — well-produced, sonically rich — is particularly well served by digital reproduction. The repurchase market creates revenue from existing catalogs without requiring new production. Bubble-era consumers fund this secondary market without significant resistance.",
+        chainActive: ["spending", "music"],
+      },
+      {
+        title: "Concert Production Values",
+        body: "Live music production scales up considerably in 1987. The elaborate stage designs, expensive equipment, and high production values of concerts are funded by corporate entertainment budgets that have expanded with the bubble. Artists perform in venues that match the aspirational geography of their music — coastal amphitheaters, resort halls, purpose-built spaces that did not exist a decade earlier. The concert is no longer just a performance; it is an experience product.",
+        chainActive: ["spending", "wealth-effect", "music"],
+      },
+      {
+        title: "Music Video as Visual Manifesto",
+        body: "Japanese music television reaches peak production value in 1987. Music videos are elaborate, well-shot, and expensive — coastal drives, rooftop settings, nighttime Tokyo sequences that establish a visual grammar for the era's aspirations. The fashion and architecture of these videos creates a self-reinforcing image of what prosperity looks like. City Pop does not just describe a lifestyle; its visual presentation demonstrates it.",
+        chainActive: ["music", "spending", "aesthetic"],
+      },
+      {
+        title: "The Nightclub Economy",
+        body: "Tokyo's nightclub scene in 1987 is flush. Venues invest in superior sound systems and aggressive booking. Club-goers spend on entry and drinks without checking prices. City Pop is the soundtrack to these spaces — music that exists because of the bubble's discretionary income and whose commercial success depends on the same conditions that fill the clubs. The genre and its social setting are mutually constitutive.",
+        chainActive: ["spending", "wealth-effect", "music"],
+      },
+    ],
+    "1988": [
+      {
+        title: "The Year of Maximum Production",
+        body: "1988 is City Pop's production peak. Label budgets are at their maximum. Studio time is expensive and available. Artists record without the commercial pressure that will define the 1990s. The music produced this year is technically sophisticated and emotionally confident — work that could only have been made in an economy whose optimism was, for the moment, still intact. Recordings from 1988 carry the specific weight of a culture that believes its prosperity is permanent.",
+        chainActive: ["cheap-money", "spending", "music"],
+      },
+      {
+        title: "Mariya Takeuchi in the Studio",
+        body: "Mariya Takeuchi is recording in the mid-to-late 1980s with the care and resources that only the bubble years could sustain. Her collaboration with husband Tatsuro Yamashita produces music of unusual craft. Plastic Love, recorded in 1984 and already circulating on mix-tapes, will not find its global audience until 2017 — but in 1988 it exists as evidence of what the era's studio culture made possible. The YouTube discovery is thirty years away.",
+        chainActive: ["music", "wealth-effect"],
+      },
+      {
+        title: "Corporate Entertainment and Live Music",
+        body: "Corporate Japan in 1988 is spending heavily on entertainment. Salarymen hold expense accounts for nightlife, karaoke, concerts. This corporate spending is the financial floor beneath much of City Pop's live economy — venues, production companies, and management firms all depend on it. Music production and live performance are not separate from the bubble; they are one of its primary expressions.",
+        chainActive: ["spending", "wealth-effect", "music"],
+      },
+      {
+        title: "Artistic Freedom as a Bubble Dividend",
+        body: "In 1988 major labels can absorb albums that don't chart. A-and-R decisions are not purely commercial calculations. This tolerance creates space for more sophisticated work — City Pop that explores extended jazz harmony, complex rhythms, arrangements that reward repeated listening over immediate impact. The bubble's willingness to absorb risk indirectly funds musical ambition. The connection is rarely acknowledged, but it is real.",
+        chainActive: ["cheap-money", "music"],
+      },
+    ],
+    "1989": [
+      {
+        title: "The Last Confident Year",
+        body: "Music production in 1989 continues at full funding, with no audible signal that conditions are about to change. The Nikkei will peak on December 29, but for most of the year that peak is not visible. Albums recorded in 1989 carry the specific confidence of work made without awareness of approaching limits. Listening to 1989 City Pop from a later vantage point, you hear a culture that did not know it was making its last statements.",
+        chainActive: ["wealth-effect", "spending", "music"],
+      },
+      {
+        title: "The Sound Transitions",
+        body: "Artists like Zard, who debut in the late 1980s, represent a sound that bridges City Pop's complexity and the simpler structures of what will become J-Pop. The market is beginning to prefer directness over sophistication. Labels sense this before they act on it. The transition is not a sharp break but a gradual rebalancing of the industry's bet — more accessible, less expensive to produce, less dependent on the session musician infrastructure that City Pop requires.",
+        chainActive: ["music", "tightening"],
+      },
+      {
+        title: "New Year's Eve 1989 at the Karaoke Bar",
+        body: "The last night of the 1980s is celebrated with unusual intensity. Karaoke boxes are fully booked weeks in advance. The City Pop playing through these evenings is the unacknowledged soundtrack of the end of something. Nobody in the karaoke room on December 31, 1989 knows that the Nikkei closed at its all-time high two days before. The music continues at the same level of confidence as always, because nothing has yet visibly changed.",
+        chainActive: ["spending", "music"],
+      },
+      {
+        title: "International Ambitions",
+        body: "Some City Pop artists attempt international crossover in 1989, using the bubble's financial confidence to fund overseas recording sessions and promotional activities. The attempts find limited audiences in Western markets — the distribution infrastructure and cultural context are absent — but they represent an ambition that the bubble made financially possible. Japan's economic confidence has become global; the music industry's reach has not yet followed.",
+        chainActive: ["music", "spending"],
+      },
+    ],
+    "1990": [
+      {
+        title: "The Budget Meeting",
+        body: "Label executives are having conversations in 1990 that would have been unthinkable in 1988. A-and-R budgets are reviewed. Acts with declining sales are dropped. The infinite production funds of the bubble years are contracting. The music that results is slightly more conservative — less willing to absorb the cost of ambitious production in exchange for uncertain commercial return. The change is not dramatic yet, but it is directional.",
+        chainActive: ["tightening", "music"],
+      },
+      {
+        title: "The Mood the Music Cannot Sustain",
+        body: "City Pop requires a specific emotional condition: prosperity, aspiration, the sense that the future will exceed the present. In 1990 the economic news contradicts this mood. The Nikkei has fallen by half. Real estate is beginning to soften. The confidence that City Pop's sonic texture assumes is slowly draining from the culture that produced and consumed it. The music continues being made and played, but its emotional register is increasingly at odds with its context.",
+        chainActive: ["tightening", "music", "collapse"],
+      },
+      {
+        title: "Radio and the Changing Playlist",
+        body: "FM radio programming in 1990 is shifting. Imported American pop is receiving more airplay. Domestic artists are covering foreign hits more frequently. The confidence in domestic production that characterized peak City Pop is giving way to internationalism as a safer commercial bet. The radio station senses the cultural temperature before the labels do, adjusting its programming toward what listeners want to hear rather than what the labels are spending to promote.",
+        chainActive: ["music", "tightening"],
+      },
+      {
+        title: "Southern All Stars and the Art of Surviving",
+        body: "Southern All Stars represent a model of adaptation — a rock-adjacent act with City Pop influences that has built a sufficiently broad audience to survive the economic contraction. Their durability illustrates what distinguishes artists who outlast the bubble from those who do not: an audience that follows them for reasons beyond the lifestyle aspirations the bubble temporarily made universal. When those aspirations deflate, artists without deeper audience loyalty have nothing left.",
+        chainActive: ["music", "collapse"],
+      },
+    ],
+    "1991": [
+      {
+        title: "The Economics of Closure",
+        body: "The economic reality of 1991 — land price collapse, banking crisis, corporate restructuring — reaches the music industry with force. Labels dramatically cut A-and-R spending. Studio time is rationed. The expensive, complex productions that defined City Pop become financially unsustainable overnight. Artists who depended on label investment for their sound find themselves without the resources their music requires. The end of the bubble is audible in what is no longer being recorded.",
+        chainActive: ["collapse", "lost-decade", "music"],
+      },
+      {
+        title: "J-Pop and the New Economics",
+        body: "The genre replacing City Pop — loosely called J-Pop — is more efficiently produced, less harmonically adventurous, and better calibrated to the mass market that label economics now require. Mr. Children, SMAP, and their peers build on simpler structures that cost less to produce and reach wider audiences. The transition is not a fall in quality so much as a change in what quality means when the budget assumptions change. The era of expensive sophistication is over.",
+        chainActive: ["collapse", "lost-decade", "music"],
+      },
+      {
+        title: "What the Crash Took from Music",
+        body: "The most lasting damage of the bubble's collapse to Japanese music is not the artists lost but the infrastructure dismantled. Studios close. Session musician rosters contract. The production culture that took a decade to build requires sustained investment to maintain — investment that post-bubble label economics cannot provide. The particular sound of City Pop was not just talent; it was talent plus infrastructure plus money. Two of those three disappear in 1991.",
+        chainActive: ["collapse", "music", "lost-decade"],
+      },
+      {
+        title: "The Archive That Would Travel",
+        body: "In 1991, nobody is thinking about how these recordings will be received in 2017. City Pop in 1991 feels like cultural residue from a discredited era of excess. The YouTube algorithm's discovery is twenty-six years away. The recordings are being quietly archived in a culture that has moved on — boxed in warehouses, pressed into CD catalogs, waiting for a digital distribution system that does not yet exist to remove every barrier that limited their reach in their original moment.",
+        chainActive: ["music"],
+      },
+    ],
+  },
 
-  /* ══════════════ ANIME ══════════════ */
-  anime: [
-    {
-      title: "Anime Before the Bubble",
-      body: "The anime industry entered the 1980s with a proven but constrained economic model: primarily television series with tight production schedules, modest budgets, and syndication-dependent revenue. Mobile Suit Gundam (1979) had demonstrated that anime could carry complex narratives for adult audiences, but the industry had not yet found a format that could reward higher production investment. The creative talent existed — studios like Madhouse, Sunrise, and the nascent Ghibli circle contained animators and directors capable of significant artistic ambition. What the industry needed was a funding model that could match ambition to resources.",
-      chainActive: ["anime"],
-    },
-    {
-      title: "The OVA Revolution",
-      body: "Original Video Animation — anime released directly to home video rather than broadcast — transformed the industry's economics in the early 1980s. Freed from television's constraints on episode length, content standards, and production schedules, OVA allowed creators to target specific audiences willing to pay retail prices for quality animation. The OVA market grew explosively through the mid-to-late 1980s, funded by the same consumer spending that drove Japan's broader retail expansion. Rental video and purchase sales provided revenue streams that television had never offered, and the format's flexibility attracted the most ambitious creative projects of the era.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Akira: The Budget",
-      body: "Akira (1988) represented a deliberate attempt to prove what Japanese animation could achieve at maximum investment. Director Katsuhiro Otomo secured a production budget of approximately ¥1.1 billion — by a significant margin the largest ever committed to a Japanese animated film at the time. This money bought 68 minutes of animation at a frame rate and visual complexity no comparable project had attempted. Toei Animation and Kodansha's investment reflected confidence in both Otomo's vision and the market: the bubble economy had created an entertainment industry willing to make bold bets on projects whose artistic ambition exceeded commercial certainty.",
-      chainActive: ["cheap-money", "spending", "anime"],
-    },
-    {
-      title: "Akira: Technical Innovations",
-      body: "The production team behind Akira implemented techniques that set new industry standards. The film used 327 different colors — more than double the typical animated feature. Dialogue was recorded before animation began rather than after (the standard), allowing animators to match lip movements with precisely written speech. Night scenes with detailed neon lighting required new approaches to color design. Key sequences ran at 24 frames per second versus the 8-12fps typical in television anime. These were not purely aesthetic decisions — they required more labor, more drawings, and more time. The budget made them possible; the talent made them meaningful.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Akira: Neo-Tokyo as Commentary",
-      body: "Otomo's Neo-Tokyo — a rebuilt city of skyscrapers and slums, of youth violence and corporate power, of technology outpacing human wisdom — was unmistakably a commentary on the real Tokyo of 1988. The bubble city had produced extraordinary wealth and extraordinary inequality simultaneously. Its gleaming financial districts and overcrowded residential neighborhoods coexisted in productive tension. Akira gave visual form to anxieties about development, power, and social fragmentation that polished corporate Japan preferred not to acknowledge. The film's dystopian imagery was received partly as fantasy and partly as recognition — too accurate to be purely fictional.",
-      chainActive: ["asset-surge", "spending", "anime"],
-    },
-    {
-      title: "Studio Ghibli's Founding",
-      body: "Studio Ghibli was established in 1985 by directors Hayao Miyazaki and Isao Takahata with producer Toshio Suzuki, backed by publisher Tokuma Shoten. The studio's founding followed the commercial success of Nausicaä of the Valley of the Wind (1984), which proved animated feature films could be commercially viable in Japanese theatrical release. Ghibli's model was distinct from the OVA market: theatrical release, family audiences, high production quality, original storytelling. Small and expensive to operate, its survival through the late 1980s depended on the bubble economy's general willingness to invest in ambitious cultural work whose returns were not guaranteed.",
-      chainActive: ["cheap-money", "spending", "anime"],
-    },
-    {
-      title: "My Neighbor Totoro",
-      body: "Released in April 1988 as a double feature with Grave of the Fireflies, My Neighbor Totoro was commercially underperforming in its initial theatrical run. The film's gentle pace, rural setting, and lack of conventional dramatic conflict made it difficult to market. What saved it was merchandise — specifically, the Totoro character goods that sold aggressively through bubble-era retail channels. By the early 1990s, Totoro had become Ghibli's mascot and one of Japan's most recognizable cultural exports. Its second life, driven by home video and consumer goods, unfolded within the economic context of bubble-era retail spending.",
-      chainActive: ["spending", "wealth-effect", "anime"],
-    },
-    {
-      title: "Grave of the Fireflies",
-      body: "Isao Takahata's Grave of the Fireflies is among the most formally accomplished animated films of the bubble era — and one of the most emotionally confrontational. Set during Japan's final months of World War II, it follows two children whose survival depends on institutions that fail them. The film refuses sentiment and refuses comfort. Its quality was immediately recognized critically while being rejected by audiences seeking lighter entertainment. Its existence — this uncompromising, formally rigorous work within Ghibli's 1988 output — reflects the degree to which the studio had been given genuine creative autonomy, a condition made possible, indirectly, by the permissive economic environment surrounding it.",
-      chainActive: ["anime"],
-    },
-    {
-      title: "The Mecha Genre and Real-Robot Anime",
-      body: "The transformation of the mecha genre in the late 1970s — from super-robot fantasies toward grittier military-realist narratives — created a template that dominated bubble-era anime production. Mobile Suit Gundam's examination of war, ideology, and technology established that animated science fiction could sustain complex storytelling across long series. Through the 1980s, studios produced numerous Gundam sequels and original mecha productions, each elaborating the real-robot aesthetic: mechanically plausible designs, politically ambiguous conflicts, psychologically developed characters. The genre served both artistic ambitions and commercial function — model kit tie-ins made mecha anime exceptionally profitable throughout the decade.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Patlabor and Urban Life",
-      body: "Patlabor (1988–1989) represents a significant moment in bubble-era anime: a series explicitly set in near-future Tokyo, centered on labor units that use giant robots as construction and policing tools. The mundane institutional focus — union disputes, maintenance schedules, bureaucratic obstruction — was a deliberate subversion of mecha conventions. Read against the bubble economy's context, it was also a meditation on Japan's construction mania, its rapid urban development, and the ordinary human beings embedded within vast economic systems. Patlabor was popular in both OVA and theatrical forms, finding an audience that appreciated its deadpan engagement with contemporary reality.",
-      chainActive: ["asset-surge", "spending", "anime"],
-    },
-    {
-      title: "OVA Economics: How It Was Financed",
-      body: "The OVA market was financed through a combination of retail video sales, rental fees, and licensing arrangements. Production committees — groups of companies sharing financial risk and rights — became the standard funding structure. Toy manufacturers, music labels, and publishers each contributed capital in exchange for licensing rights to their respective categories. This committee structure spread risk but also complicated creative control: the commercial interests of multiple parties shaped content decisions. Nevertheless, the OVA format enabled significantly higher per-minute production budgets than television, and the resulting quality differential was visible and significant to audiences who paid retail prices for the product.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "The Doujinshi Scene",
-      body: "Comiket — the biannual amateur comics convention held in Tokyo — grew explosively through the 1980s, enabled by accessible home publishing technology and the bubble era's consumer spending. Fan-produced manga (doujinshi) became a substantial parallel economy, with popular creators selling thousands of copies of self-published work. The doujinshi scene was simultaneously parasitic on commercial anime (most content featured existing characters) and genuinely creative — developing new genres, conventions, and communities of practice that incubated creators who would later enter the professional industry. The infrastructure of fandom that Japan developed during this period became foundational to how manga and anime culture organized itself globally.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Voice Acting as a Profession",
-      body: "The 1980s established voice acting (seiyuu) as a distinct professional culture in Japan. The growth of both television anime and the OVA market increased demand for trained voice performers, leading to dedicated training schools and management agencies. By the late 1980s, certain voice actors had developed substantial fan followings independent of their roles — a phenomenon that would intensify dramatically in the 1990s and beyond. The seiyuu industry's commercial infrastructure — concerts, character albums, fan events — began forming during the bubble, creating a model for talent commodification that remains central to the anime industry's economic structure today.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Cel Animation at Its Peak",
-      body: "The 1980s represent both the apotheosis and the final decade of cel animation as the dominant production technology. Hand-drawn images on transparent acetate, photographed sequentially — a technique demanding extraordinary collective labor. The bubble era funded the most ambitious cel productions ever attempted: Akira's 327-color palette, the technical complexity of Ghibli's environments, the kinetic precision of high-end OVA action sequences. Digital tools were beginning to appear in production pipelines by the late 1980s, but the look that defines the era is analog — the particular texture of photographed cels, the movement of hand-drawn water, the warmth of painted backgrounds.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Anime's International Distribution",
-      body: "Japanese anime reached international markets through the 1980s via localized broadcast versions — American adaptations of Macross (Robotech), Gatchaman (Battle of the Planets), and Voltron that removed content deemed unsuitable for foreign audiences, often altering narratives substantially. Meanwhile, videotape fanzine networks circulated unedited Japanese anime among dedicated fans who developed a preference for original versions. This early fandom community — technically sophisticated, culturally curious, willing to engage with subtitles — established the infrastructure for the international anime market that would emerge more formally in the 1990s. The bubble era's anime quality was the product these fans were evangelizing.",
-      chainActive: ["anime"],
-    },
-    {
-      title: "The Manga-to-Anime Pipeline",
-      body: "The relationship between manga and anime production intensified during the bubble era. Successful manga provided pre-tested intellectual properties, established fan bases, and reduced investment risk. Publishers and animation studios developed formal partnership structures aligning their commercial interests. The pipeline also shaped production aesthetics: the visual language of printed manga — its panel compositions, character designs, narrative rhythms — was translated directly into animation. Creators like Katsuhiro Otomo (Akira), Rumiko Takahashi (Urusei Yatsura), and Masamune Shirow (Ghost in the Shell) moved between formats as commercial logic demanded, each bringing the conventions of one medium into productive contact with the other.",
-      chainActive: ["spending", "anime"],
-    },
-    {
-      title: "Gainax: Fans Gone Professional",
-      body: "Gainax, founded in 1984, represented a new kind of anime studio: one created by passionate fans who had made amateur films before entering the professional industry. Their 1984 opening film for the Osaka Science Fiction Convention — a ten-minute animation called Daicon IV — displayed technical skill that attracted professional attention. Royal Space Force: The Wings of Honnêamise (1987), Gainax's first theatrical feature, was produced with a ¥800 million budget that Bandai provided partly because they believed an unconventional team might produce something unusual. The bubble economy's willingness to take cultural risks on untested creators made experiments like Gainax financially possible.",
-      chainActive: ["cheap-money", "spending", "anime"],
-    },
-    {
-      title: "Female Creators and Shojo Influence",
-      body: "Women's manga (shojo) contributed significantly to bubble-era anime content and aesthetics. Studios adapted shojo manga for television and OVA, bringing female creative perspectives into the medium. Creators like Rumiko Takahashi dominated both manga sales and anime adaptation through the 1980s. The visual vocabulary of shojo — emotional expressiveness, detailed costuming, psychological interiority — influenced production aesthetics beyond explicitly female-targeted content. Women also worked as animators, directors, and writers across the industry, though in smaller numbers than men and rarely in the most visible positions — a structural imbalance that the era's prosperity did nothing to resolve.",
-      chainActive: ["anime"],
-    },
-    {
-      title: "The Bubble's Collapse and Anime",
-      body: "The early 1990s brought visible contraction to anime production budgets. OVA releases declined as the rental video market contracted and consumer spending tightened. Television production — cheaper, more reliable, advertiser-supported — became the primary vehicle for new anime. The most ambitious projects of the early 1990s — Ghost in the Shell (1995) and Neon Genesis Evangelion (1995) — were greenlit during the transition period, carrying the creative ambitions of the bubble era into a more financially constrained environment. Evangelion's production difficulties and famously incomplete final episodes reflect the direct collision between creative ambition and the budget reality of post-bubble Japan.",
-      chainActive: ["tightening", "collapse", "anime"],
-    },
-    {
-      title: "Legacy: How Bubble-Era Anime Shaped the Medium",
-      body: "The anime produced between 1985 and 1991 established creative and technical benchmarks against which subsequent production has been measured. Akira demonstrated that animation could achieve cinematic ambition without compromise. Ghibli proved that hand-drawn feature films could sustain sophisticated storytelling for broad audiences. The OVA market established that adult animation could find a paying audience without broadcast infrastructure. The international awareness of anime as a distinct art form — which accelerated dramatically in the late 1990s — was built on the foundation of work produced during the bubble. The era's creative output was disproportionate to its brief span.",
-      chainActive: ["anime", "spending", "wealth-effect"],
-    },
-  ],
+  /* ══════════════════════════════════════
+     ANIME
+  ══════════════════════════════════════ */
+  anime: {
+    "1985": [
+      {
+        title: "The OVA Format Opens",
+        body: "The videocassette revolution creates a new distribution model for anime in 1985: the Original Video Animation, released directly to retail without broadcast or theatrical intermediary. This format allows content outside broadcast standards — darker themes, more violence, genres that find enthusiastic niche audiences. The OVA democratizes anime production; smaller studios can reach audiences without the infrastructure a broadcast deal requires. The format is not incidental to the bubble era — it is funded by the same consumer spending that is expanding across every category.",
+        chainActive: ["spending", "anime"],
+      },
+      {
+        title: "Megazone 23 and Urban Unease",
+        body: "Megazone 23, released in March 1985, establishes a template for mid-decade OVA: a contemporary city that conceals a fundamental lie, corporate conspiracy, a protagonist who discovers the truth at the cost of everything. The visual language is urban, neon-lit, and pessimistic — a counterpoint to the bubble's official optimism. The film articulates anxieties that the economic data does not yet support. Dystopian fiction in bubble-era Japan does not wait for the crash to find its subject matter.",
+        chainActive: ["anime"],
+      },
+      {
+        title: "Studio Ghibli Is Founded",
+        body: "Studio Ghibli is established in June 1985 following the commercial success of Nausicaä of the Valley of the Wind. Hayao Miyazaki and Isao Takahata begin production on Laputa: Castle in the Sky. The studio's founding commitment — hand-drawn animation of the highest possible quality, stories that take children and their imaginations seriously — requires sustained investment. The bubble era's capacity to fund ambitious creative projects makes Ghibli's first decade financially viable.",
+        chainActive: ["anime"],
+      },
+      {
+        title: "The Manga-to-Anime Pipeline",
+        body: "The relationship between manga and anime is formalizing in 1985 into a reliable commercial structure. Long-running Weekly Shōnen Jump titles — Dragon Ball entering production, Saint Seiya in development — provide pre-existing audiences that reduce the commercial risk of adaptation. The manga serialization system, which tests story and character over years of weekly publication, produces source material with proven audience attachment before a single animation cel is drawn.",
+        chainActive: ["anime", "spending"],
+      },
+    ],
+    "1986": [
+      {
+        title: "Dragon Ball Begins",
+        body: "Dragon Ball starts its Fuji TV run in February 1986. The series' early episodes are conventional action animation — modest budget, standard production schedule, nothing that predicts the franchise it will become. Its importance in 1986 is not its quality but its audience reach: a Weekly Shōnen Jump adaptation with a proven readership, broadcast in a prime time slot, establishing viewing habits in a generation of children who will be the anime industry's core consumers throughout the 1990s.",
+        chainActive: ["anime", "spending"],
+      },
+      {
+        title: "Wings of Honneamise in Production",
+        body: "Gainax's debut feature, Royal Space Force: The Wings of Honneamise, enters full production in 1986 with a budget that reflects bubble-era ambition. The film's premise — a fully realized alternative world, not a fantasy or science fiction adaptation but an entirely original creation — requires resources that only the flush economy can provide a first-time studio. The decision to fund it represents a confidence in creative investment that will be tested by the film's commercial performance.",
+        chainActive: ["anime", "cheap-money"],
+      },
+      {
+        title: "The OVA Market Matures",
+        body: "By 1986 the OVA market has established stable commercial patterns. Manga adaptations in fantasy and science fiction. Genre work in horror, mecha, and adult content. Direct-to-video delivery to rental shops and specialist retailers. The format is profitable without requiring theatrical production values — studios can produce efficiently and release to a guaranteed base of rental customers. Multiple studios are operating primarily in OVA, building the production infrastructure that will support larger projects.",
+        chainActive: ["anime", "spending"],
+      },
+      {
+        title: "Bubblegum Crisis Takes Shape",
+        body: "Bubblegum Crisis, in development at AIC through 1986, imagines a Tokyo rebuilt after an earthquake by a corporation whose privatized police force has more power than the government. The series' visual design — power armor, corporate megastructures, neon-lit streets — engages with anxieties running beneath the bubble's surface optimism. Science fiction in 1986 Japan does not need to search for dystopian material. It finds it by looking at the present and extending its logic forward.",
+        chainActive: ["anime"],
+      },
+    ],
+    "1987": [
+      {
+        title: "Wings of Honneamise: Ambition and Its Costs",
+        body: "Royal Space Force: The Wings of Honneamise premieres in March 1987 to critical admiration and commercial disappointment. Its reported budget of 800 million yen is not recovered at the box office. But the film establishes Gainax as a studio capable of extraordinary ambition and demonstrates what bubble-era production funding can achieve when applied to original work. The commercial failure is real; so is the artistic achievement. The bubble can absorb both.",
+        chainActive: ["anime", "spending"],
+      },
+      {
+        title: "Bubblegum Crisis Episodes",
+        body: "The first episodes of Bubblegum Crisis appear in 1987. The series' visual language — vigilante women in combat suits defending a privatized Tokyo against corporate-made androids — creates a template that will influence mecha and cyberpunk anime for a decade. Its production quality, high for an OVA series, reflects the funded confidence of its moment. That the story it tells involves corporate overreach and privatized violence is a detail the bubble economy does not pause to examine.",
+        chainActive: ["anime", "wealth-effect"],
+      },
+      {
+        title: "Animation Budgets and Corporate Sponsorship",
+        body: "By 1987 anime production benefits visibly from bubble-era entertainment spending. Advertising budgets fund anime tie-ins. Corporations sponsor theatrical productions as prestige projects. The money circulating in the entertainment industry has a direct effect on what can be made and how well it can be made. Production values in 1987 anime are measurably higher than in 1982 anime — not only because of technical progress but because the economy can now afford to pay for quality.",
+        chainActive: ["anime", "spending", "wealth-effect"],
+      },
+      {
+        title: "Akira: The Production Begins",
+        body: "Katsuhiro Otomo's film Akira enters full production in 1987 with a budget of approximately 1.1 billion yen — the largest ever committed to a Japanese animated feature. The scale requires technical innovations: 24-frames-per-second fully detailed animation, lip-syncing dialogue recorded before animation rather than after, a level of background detail unprecedented in theatrical anime. The project is only possible because the bubble economy can absorb the risk of a production this ambitious.",
+        chainActive: ["anime", "cheap-money", "asset-surge"],
+      },
+    ],
+    "1988": [
+      {
+        title: "Akira Opens",
+        body: "Akira opens in July 1988 and is immediately understood as something unprecedented. Neo-Tokyo 2019 is rendered with a visual density — layered backgrounds, fully animated crowds, seamless day-to-night atmospheric shifts — that no previous theatrical anime has achieved. The film's politics are not subtle: a city built on suppressed disaster, ruled by corrupt officials, detonated by what it tried to contain. The bubble economy funds a film whose subject is what happens when growth and control become indistinguishable.",
+        chainActive: ["anime", "asset-surge", "wealth-effect"],
+      },
+      {
+        title: "Totoro and Grave of the Fireflies",
+        body: "Studio Ghibli releases two films simultaneously in April 1988: My Neighbor Totoro and Grave of the Fireflies. The double release is a commercial risk; Totoro initially underperforms against expectations. Together the films represent the range of what bubble-era funding supports — rural childhood fantasy and wartime child mortality, both executed with complete artistic seriousness. The economy's capacity to absorb commercial risk makes this kind of creative range possible.",
+        chainActive: ["anime", "spending"],
+      },
+      {
+        title: "The Anime Merchandise Ecosystem",
+        body: "In 1988 the commercial ecosystem surrounding anime has expanded well beyond the productions themselves. Model kits, character goods, specialist magazines, soundtrack CDs, art books — all are sold to consumers with bubble-era discretionary income. The merchandise revenue subsidizes production budgets and extends the financial life of successful titles. Anime is becoming an industrial system rather than a broadcast medium, with multiple revenue streams reinforcing each other.",
+        chainActive: ["anime", "spending", "wealth-effect"],
+      },
+      {
+        title: "OVA at Maximum Volume",
+        body: "The OVA market in 1988 is producing at maximum volume — multiple new titles monthly across every genre. Quality varies enormously, from serious artistic projects to quickly produced commercial content. The economics sustain both because bubble-era consumers are spending freely on the format. Rental shops stock every title. Collectors buy outright. The same economic conditions that fund the industry's best work also fund its most disposable output. Volume and quality coexist without contradiction.",
+        chainActive: ["anime", "spending"],
+      },
+    ],
+    "1989": [
+      {
+        title: "Patlabor and the Near Future",
+        body: "The Patlabor OVA series (1988–1989) takes mecha anime in an unusual direction: grounded, bureaucratic, concerned with labor relations and institutional politics in a near-future Japan that looks very much like 1989 Japan. The mechs are operated by a police unit subject to budget reviews and internal politics. The choice to use science fiction not for escapism but for social realism is distinctive in a genre typically oriented toward fantasy combat. Patlabor works because its world is recognizable.",
+        chainActive: ["anime"],
+      },
+      {
+        title: "Kiki's Delivery Service",
+        body: "Studio Ghibli releases Kiki's Delivery Service in July 1989, and its commercial performance transforms the studio's financial position. The film demonstrates that family-oriented theatrical anime can compete consistently with Hollywood in the Japanese market. Miyazaki's craft is now bankable at scale. The studio that was a creative experiment in 1985 is by 1989 a reliable theatrical institution — a transformation made possible by a combination of artistic excellence and economic conditions willing to pay for it.",
+        chainActive: ["anime", "spending"],
+      },
+      {
+        title: "The Nikkei Peak and the Anime Industry",
+        body: "The Nikkei closes at its all-time high on December 29, 1989. The anime industry's connection to this peak is indirect but structural: advertising spending that funds broadcast anime, discretionary income that sustains the OVA and merchandise markets, corporate entertainment budgets that underwrite theatrical prestige projects. None of this has yet contracted. The industry enters 1990 at full capacity, without anticipating that the conditions sustaining that capacity are about to change.",
+        chainActive: ["anime", "asset-surge", "spending"],
+      },
+      {
+        title: "The Franchise Logic",
+        body: "The Gundam franchise, through its various OVA continuations and theatrical compilations, establishes in 1989 a commercial model that will prove more durable than single-title production: consistent universe, recurring characters, loyal collector base, model kit sales that continue regardless of individual title performance. The franchise provides a financial floor that does not depend on each new production's success. This logic will sustain the anime industry through the harder conditions coming.",
+        chainActive: ["anime", "spending"],
+      },
+    ],
+    "1990": [
+      {
+        title: "The First Budget Pressure",
+        body: "Advertising spending begins contracting in 1990 as the Nikkei falls. Broadcast anime budgets tighten. Some planned OVA series are cancelled or shortened before completion. Production studios that expanded rapidly during the bubble years are discovering that their overhead is calibrated for conditions that no longer exist. The anime industry's relationship to economic conditions, always indirect, becomes suddenly and visibly direct.",
+        chainActive: ["tightening", "anime", "collapse"],
+      },
+      {
+        title: "Akira's International Life",
+        body: "Akira continues to find audiences internationally in 1990, particularly in the United States and United Kingdom, where it is distributed in dubbed versions. Its influence on Western science fiction, comics, and eventually film is becoming visible. The film that was a domestic commercial disappointment in 1988 is becoming a global cultural reference point. Japanese animation is recognized internationally in ways it has not been before. The bubble economy funded a film that outlasted the bubble.",
+        chainActive: ["anime"],
+      },
+      {
+        title: "Gainax and Economic Anxiety",
+        body: "Gainax in 1990 is dealing with the financial aftermath of Wings of Honneamise and the ongoing production difficulties of Nadia: The Secret of Blue Water. Hideaki Anno is directing Nadia under conditions of considerable stress. The project that is beginning to take shape in Anno's thinking — a mecha series about depression, institutional failure, and the inadequacy of heroism — is being conceived in an environment of economic and creative anxiety. These conditions will shape Neon Genesis Evangelion's eventual texture.",
+        chainActive: ["anime", "collapse"],
+      },
+      {
+        title: "The Collector Market's Inertia",
+        body: "Anime merchandise and collectibles are still selling reasonably well in 1990 even as production conditions tighten. The collector market, established and habituated during the bubble years, has enough behavioral momentum to continue for now. Casual consumer spending that supported rapid expansion is pulling back, but dedicated collectors are stickier. The industry is discovering the difference between its core audience and its boom-era peripheral audience as the latter disappears.",
+        chainActive: ["anime", "tightening"],
+      },
+    ],
+    "1991": [
+      {
+        title: "Production Contraction",
+        body: "The anime industry enters 1991 with significantly reduced budgets across every production category. OVA series that would have been greenlit without hesitation in 1988 are now rejected. Studios are reducing staff. The production infrastructure that the bubble built — the specialist animators, the background artists, the effects teams — is more than the post-bubble market can sustain. The skills and people trained during the flush years are dispersing into a contracting industry.",
+        chainActive: ["collapse", "anime", "lost-decade"],
+      },
+      {
+        title: "Evangelion's Long Shadow",
+        body: "Neon Genesis Evangelion is in development in 1991 under conditions that will eventually define its character: Gainax's financial difficulties, Anno's personal depression, the general atmosphere of deflated ambition following the bubble's collapse. The series that will redefine anime when it broadcasts in 1995 is being conceived in the lost decade's early months. Its themes — institutional failure, psychological disintegration, the inadequacy of conventional heroism — are shaped by its development environment in ways that will not be apparent until much later.",
+        chainActive: ["anime", "collapse", "lost-decade"],
+      },
+      {
+        title: "International Licensing as Survival",
+        body: "Facing a contracting domestic market, anime producers are beginning to look seriously at overseas licensing revenue. The international interest generated by Akira creates licensing opportunities that did not exist before 1988. The anime industry discovers in 1991 that the global audience whose existence it had not planned for may partially compensate for a domestic audience spending less. The export economy that the bubble neglected is becoming, by default, a recovery strategy.",
+        chainActive: ["anime", "collapse"],
+      },
+      {
+        title: "What the Bubble Era Built",
+        body: "The lasting legacy of bubble-era anime is not primarily the titles it produced but the production capacity and talent it developed. Studios, directors, animators, and technical personnel who trained during the flush years carry those skills into the harder 1990s. The lost decade's anime — including Evangelion, Ghost in the Shell, Cowboy Bebop — is made by people whose craft was formed in the bubble. The economic conditions that trained them no longer exist; the training endures.",
+        chainActive: ["anime", "lost-decade"],
+      },
+    ],
+  },
 
-  /* ══════════════ AESTHETIC ══════════════ */
-  aesthetic: [
-    {
-      title: "DC Brands and Japanese Designer Fashion",
-      body: "In the early 1980s, Japanese fashion underwent a transformation centered on domestic designer brands — called DC brands (Designer's Character) — that rejected the Western luxury hierarchy in favor of Japanese conceptual design. Labels like Issey Miyake, Comme des Garçons (Rei Kawakubo), and Yohji Yamamoto had already conquered Paris runways by 1981–1982, reshaping international fashion's understanding of what Japanese design could be. Domestically, brands targeting the emerging middle class expanded rapidly. The DC brand phenomenon was among the first signs of the consumer spending that would define the decade — affluence finding aesthetic expression before the bubble had fully inflated.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "The Department Store as Cultural Institution",
-      body: "The depāto — Japan's department store — occupied a unique position in bubble-era culture. Tokyo's major stores (Mitsukoshi, Isetan, Takashimaya, Seibu) were not primarily retail destinations but comprehensive lifestyle environments: galleries hosting serious contemporary art, gourmet food floors importing seasonal specialties from every prefecture, rooftop gardens, concert halls, and travel agencies. The service aesthetic was extraordinary — white-gloved staff, precise wrapping, ritualized customer interaction. Department stores were where aspirational identity was performed and purchased. Their annual sales figures reached historic highs through the late 1980s, making them both barometers and engines of the bubble's consumer culture.",
-      chainActive: ["wealth-effect", "spending", "aesthetic"],
-    },
-    {
-      title: "The Luxury Brand Obsession",
-      body: "The bubble era transformed Japan into the world's largest luxury goods market. Louis Vuitton, Chanel, Hermès, and Gucci opened flagship stores in Tokyo's Ginza and Omotesando districts; their Japanese sales represented significant fractions of global revenue. The demand was driven not merely by personal wealth but by gift-giving culture: Japan's biannual gift-giving seasons created structured demand for recognizable luxury items. Luxury brands were social currency — purchased not primarily for personal enjoyment but for what their display communicated about the giver's status and consideration. Japan's luxury market exceeded that of any European country through most of the late 1980s.",
-      chainActive: ["wealth-effect", "spending", "aesthetic"],
-    },
-    {
-      title: "Harajuku: The Street as Laboratory",
-      body: "Harajuku's Takeshita-dori and Omotesando became, during the bubble era, global centers of youth fashion experimentation. Distinct visual tribes coexisted within a small geographic area: rockabilly dancers in Yoyogi Park, Lolita fashion pioneers in boutique-lined streets, high-fashion aspirants on the boulevard. The density of distinct aesthetics within a small area — and the seriousness with which young people committed to their visual identities — had no real equivalent elsewhere. Fashion photographers documented Harajuku as a phenomenon in itself. The street had become an art medium, with young people as its practitioners, supported by an economy that provided them with disposable income and a culture that rewarded visual originality.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "Postmodern Architecture",
-      body: "Bubble-era Japan produced some of the most architecturally adventurous buildings of the postmodern period. Economic conditions permitted experiments that more constrained markets would not have funded. Kisho Kurokawa, Fumihiko Maki, and Toyo Ito created buildings of formal and conceptual complexity. Kenzo Tange's Tokyo Metropolitan Government Building (1991) combined monumental civic scale with Gothic-influenced detailing. The Spiral Building in Omotesando (1985) became an icon of commercial architecture as cultural statement. The bubble's investment in construction — land was always more valuable with buildings on it — incidentally funded a burst of architectural creativity whose most interesting products were buildings that didn't look like offices.",
-      chainActive: ["asset-surge", "real-estate", "aesthetic"],
-    },
-    {
-      title: "Interior Design and the Hotel Aesthetic",
-      body: "Bubble-era interiors reflected an aesthetic of maximum investment: marble floors, high ceilings, custom lighting, and materials imported from Europe and across Asia. Hotel lobbies became showcase spaces, designed to signal cultural ambition as much as luxury. The hotel aesthetic — its performative specificity, its insistence on designed experience at every scale — became a reference point for commercial design broadly. Interior design as a profession expanded significantly during the 1980s, as the building boom and retail expansion created sustained demand for designed commercial interiors. The standards developed during this period influenced hospitality design internationally through the work of Japanese designers consulted by global hotel chains.",
-      chainActive: ["spending", "aesthetic", "real-estate"],
-    },
-    {
-      title: "Advertising Culture and Visual Language",
-      body: "Japanese advertising in the bubble era was formally sophisticated, internationally influenced, and deeply connected to celebrity. Major campaigns featured Hollywood stars — Michael Jackson for Pepsi, celebrities across fashion and electronics — blending imported cultural capital with domestic consumer culture. The visual language was glossy, technically precise, and aesthetically adventurous. Advertising agencies like Dentsu and Hakuhodo operated at extraordinary scale, managing campaigns across print, television, and outdoor media with craft investment comparable to fine art production. The advertising aesthetic of the bubble era established visual conventions still visible in Japanese commercial communication, and the agency culture it produced shaped Japanese media structures for decades.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "Photography and Fashion Magazines",
-      body: "Publications like An-An, Non-No, Popeye, and Brutus created the visual vocabulary of bubble-era aspiration. Fashion photography moved between studio formalism and street documentation; lifestyle photography constructed imaginary versions of how the urban professional lived. Magazine culture was central to bubble-era consumption: readers understood their own taste through mediated images of desirable life. Art direction was taken seriously — magazines invested in skilled photographers, designers, and stylists. The physical quality of Japanese magazine production — paper, print, binding — reflected the same investment in surface perfection that characterized the era's consumer culture generally. These publications were themselves designed objects as much as information carriers.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "Consumer Electronics Design",
-      body: "Japanese consumer electronics — Sony, Panasonic, Sharp, Canon — defined the design aesthetic of personal technology through the 1980s globally. The Sony Walkman, the Discman, the compact camera, the VHS recorder: each represented an integration of function and aesthetic refinement that positioned Japanese electronics as desirable objects independent of their technical capabilities. Design was treated as engineering problem and marketing strategy simultaneously. The miniaturization aesthetic — smaller, thinner, more precisely assembled than competitors — became a recognizable signature. This design culture reflected manufacturing excellence that the bubble economy had funded and that the Lost Decade would subsequently struggle to sustain as Korean and Taiwanese competitors closed the gap.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "Car Culture and Automotive Design",
-      body: "The bubble era transformed Japanese automotive culture. Rising incomes created a car market that extended beyond transportation to status signaling. Toyota's Soarer and various luxury-oriented coupé designs of the late 1980s offered domestic luxury alternatives to European imports. Young professionals in Tokyo spent significant proportions of disposable income on vehicles that would spend most of their lives in parking structures — the density of the city made driving impractical, but ownership communicated arrival. Car audio systems, custom interiors, and styling modifications supported an industry around automotive aesthetics. The car-as-object — independent of the car-as-transport — was a distinctly bubble-era phenomenon.",
-      chainActive: ["spending", "wealth-effect", "aesthetic"],
-    },
-    {
-      title: "Food Culture and the Aesthetics of Dining",
-      body: "Japanese food culture reached unusual elaboration during the bubble era. The kaiseki tradition — multi-course haute cuisine with rigorous presentation standards — attracted a much broader customer base than it had previously. The aesthetics of food presentation: seasonal ingredients chosen to emphasize natural qualities, ceramics selected to complement color and texture, the choreography of service. Restaurant interiors were designed with equivalent care. Food became an aesthetic experience rather than simply nutrition, and the visual dimension of eating became culturally significant in ways that eventually spread globally through Japanese cuisine's international expansion. The depachika — department store basement food halls — brought this sensibility to everyday shopping.",
-      chainActive: ["spending", "wealth-effect", "aesthetic"],
-    },
-    {
-      title: "Visual Kei Origins",
-      body: "Visual kei — the genre of Japanese rock characterized by elaborate costuming, androgynous aesthetics, and theatrical performance — emerged from the mid-1980s collision of heavy metal, glam rock, and Japan's existing tradition of theatrical performance. Bands like X Japan, BUCK-TICK, and early Luna Sea developed aesthetics that borrowed from European glam and American hard rock while creating something specifically Japanese in its excess and emotional register. The bubble economy provided the consumer infrastructure — boutiques, magazines, concert venues — that could support a subculture built around highly specific visual identities requiring significant personal spending to maintain.",
-      chainActive: ["spending", "aesthetic", "music"],
-    },
-    {
-      title: "Graphic Design and Print Culture",
-      body: "Japanese graphic design in the 1980s produced work of international significance. Designers including Ikko Tanaka, Tadanori Yokoo, and Makoto Saito worked across advertising, publishing, and cultural institutions, creating visual identities of formal boldness. The typographic challenge of integrating Roman and Japanese scripts produced solutions with no Western equivalents. Print culture was lavishly funded: corporate annual reports, cultural institution catalogs, and high-end fashion publications were designed and produced with material investment that distinguished the era. Japanese graphic design's global influence on poster design, typography, and information visualization was significant and, in international design history, persistently underacknowledged.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "Golf Courses and Leisure Design",
-      body: "Golf underwent a remarkable transformation during the bubble: from upper-class leisure to mainstream status aspiration. Club membership prices reached ¥500 million or more — traded like securities in financial publications. New courses were built aggressively across Japan's prefectures, often on mountainous terrain requiring expensive grading and infrastructure. The golf course as designed landscape — rolling terrain, manicured fairways, decorative water features — represented landscape architecture as investment vehicle. The aesthetic of golf — its controlled naturalism, its social ritual, its equipment culture — penetrated corporate culture broadly. Golf ability became a professional credential in ways difficult to comprehend outside the specific context of the late 1980s.",
-      chainActive: ["wealth-effect", "spending", "real-estate", "aesthetic"],
-    },
-    {
-      title: "Manga as Visual Culture",
-      body: "Manga achieved extraordinary cultural reach during the bubble era, extending well beyond the youth demographics that had defined its previous readership. Weekly manga magazines circulated in the tens of millions; standalone volumes occupied dedicated floors of bookshops and convenience stores. The visual language of manga — its panel compositions, its expressive character designs, its sophisticated handling of time and space — was among the most formally inventive graphic traditions in the world. Manga culture provided visual archetypes that structured how large segments of Japanese society imagined beauty, desire, power, and emotion. The bubble era's manga was not only entertainment but a shared visual vocabulary for an entire nation.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "The Wabi-Sabi Counterpoint",
-      body: "Against the bubble's visual maximalism, a counterpoint persisted: the Japanese aesthetic tradition of wabi-sabi, finding beauty in imperfection, impermanence, and incompleteness. Traditional craft forms — ceramics, lacquerware, textile dyeing — continued to attract serious practitioners and collectors. The tension between these aesthetic modes — contemporary appetite for polish and novelty versus traditional valuation of age, irregularity, and restraint — was not resolved during the bubble era. The survival of wabi-sabi sensibility through the bubble's excess may be one reason that post-bubble Japan turned toward minimalism with such conviction. The aesthetic correction was already present within the culture it would eventually replace.",
-      chainActive: ["aesthetic"],
-    },
-    {
-      title: "Omiyage and Souvenir Culture",
-      body: "Omiyage — the practice of bringing back packaged food souvenirs for colleagues and family from any journey — functioned as a significant consumer culture institution during the bubble era. As Japanese tourism expanded domestically and internationally, the omiyage economy grew with it. Confectionery brands developed elaborate packaging specifically for souvenir purchase. Regional specialties were marketed through department stores. The social obligation embedded in omiyage culture — the expectation of gift-giving as social maintenance — created structured consumer demand largely independent of personal taste or desire. It also produced some of the most sophisticated food packaging design in the world, a side effect of the culture's insistence on presentational quality.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "How the Aesthetic Changed After the Bubble",
-      body: "Post-bubble Japanese aesthetic culture underwent a significant shift. The maximalism of the late 1980s gave way to a more restrained visual sensibility in the 1990s — influenced partly by economic contraction and partly by a deliberate critical reaction against the excess that the bubble was increasingly recognized to have represented. Japanese minimalism — in architecture (Tadao Ando's work gained international recognition), fashion (Issey Miyake's later work), and interior design — became the globally legible face of Japanese aesthetic export in the 1990s. The discipline of constraint replaced the spectacle of abundance as the dominant mode. This shift was as culturally significant as the bubble itself.",
-      chainActive: ["collapse", "lost-decade", "aesthetic"],
-    },
-    {
-      title: "How Bubble Aesthetics Went Global",
-      body: "The visual culture of bubble-era Japan diffused internationally through multiple channels: fashion export, tourist observation, magazine coverage, and eventually the internet. Japanese streetwear and fashion aesthetics influenced designers in London, New York, and Seoul. The department store service model was studied and partially adopted by luxury retailers globally. Manga's visual language shaped comic and graphic novel art internationally. Japanese product design set benchmarks that competitors throughout Asia competed against. The aesthetic diffusion of bubble-era Japan was largely not credited as Japanese in its destination markets — it was absorbed as simply good design, which was, in some ways, the highest possible recognition.",
-      chainActive: ["aesthetic"],
-    },
-    {
-      title: "The Aesthetic Legacy",
-      body: "The bubble era produced a density of significant aesthetic work — in fashion, architecture, graphic design, animation, and music — that was disproportionate to its seven-year span. Whether the creativity preceded the money and was merely enabled by it, or was generated by it, remains an open question. What is clear is that the cultural output of bubble Japan remains visible in contemporary Japanese design, in international fashion, in animation, and in the global nostalgia for a style that still reads as specific, ambitious, and irreplaceable. The legacy of the bubble is not primarily economic — it is aesthetic, and it is still actively shaping how the world looks.",
-      chainActive: ["aesthetic", "spending", "wealth-effect"],
-    },
-  ],
+  /* ══════════════════════════════════════
+     AESTHETIC
+  ══════════════════════════════════════ */
+  aesthetic: {
+    "1985": [
+      {
+        title: "Japanese Designers on the World Stage",
+        body: "By 1985 Rei Kawakubo and Yohji Yamamoto have been presenting in Paris for four years. The Western fashion establishment is still processing their 1981 debut — the dark colors, the asymmetry, the deliberate rejection of conventional beauty. These designers are not imitating European fashion; they are proposing an alternative to it. The domestic market's prosperity funds the Paris presence; the Paris presence validates the domestic market's investment in avant-garde clothing.",
+        chainActive: ["aesthetic", "spending"],
+      },
+      {
+        title: "The Department Store as Cultural Institution",
+        body: "Shibuya's Parco and Seibu department stores are defining a visual retail culture in 1985 that connects fashion, art, music, and architecture in a single consumer space. These stores commission artists for installations, design elaborate seasonal windows, publish influential magazines. The department store is not primarily a retail venue — it is a cultural institution that happens to sell things. The distinction matters: it attracts a customer who is buying an experience and an identity, not just a product.",
+        chainActive: ["aesthetic", "spending"],
+      },
+      {
+        title: "Issey Miyake and Material Thinking",
+        body: "Issey Miyake is working in 1985 with the systematic ambition of an architect rather than a couturier. His exploration of pleating — the Pleats Please line is in development — treats the body as a space to be organized rather than a form to be decorated. The work requires significant investment in material research and technical development. The bubble economy's willingness to fund premium-priced innovative clothing makes this kind of material experimentation commercially viable. Art and commerce are not in conflict here.",
+        chainActive: ["aesthetic"],
+      },
+      {
+        title: "Harajuku and the Street",
+        body: "The Harajuku street fashion scene is establishing its distinctive character in 1985 — young people spending seriously on fashion as self-expression rather than status display. The subcultures that will define Japanese street fashion globally are beginning to differentiate. This is not bubble consumption: many participants are spending modestly, resourcefully, creatively. But the economic confidence of the era creates conditions in which individuality of dress is socially acceptable in ways it was not a generation earlier.",
+        chainActive: ["aesthetic", "spending"],
+      },
+    ],
+    "1986": [
+      {
+        title: "The Luxury Brand Rush",
+        body: "By 1986 European luxury brands are establishing Tokyo flagship stores with unusual urgency. Vuitton, Hermès, Gucci — the Japanese consumer is the most important luxury market in the world per capita, and the brands are restructuring their global operations to serve it. Store design, service standards, and product allocation are adjusted to meet Japanese expectations. The brands that understand what Japanese consumers want — quality, authenticity, visible provenance — capture market positions they will hold for decades.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+      {
+        title: "The Bubble Interior",
+        body: "Japanese interior design magazines in 1986 are educating a newly affluent readership in how to spend on their living environments. The template they propose — white walls, imported contemporary furniture, track lighting, visible stereo equipment as design object — becomes an aspirational standard for urban middle-class households. The design media is not documenting existing taste; it is creating it. The magazines are instruction manuals for a lifestyle that the bubble's prosperity has made financially accessible.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+      {
+        title: "Golf as Economic Signal",
+        body: "Golf club membership certificates are financial instruments in 1986: bought and sold as speculative assets, their price linked to land values and corporate entertainment budgets. The golf course is a stage for business relationships conducted through sport. Golf equipment, clothing, and accessories are premium purchases for aspirational consumers. The game itself is almost incidental to the social and financial functions the bubble has assigned to it.",
+        chainActive: ["aesthetic", "asset-surge", "spending"],
+      },
+      {
+        title: "The Magazine Ecosystem",
+        body: "Japanese magazines in 1986 are design objects in themselves — printed on high-quality paper with sophisticated layouts that reflect advertising revenues from luxury brands. anan, Brutus, Popeye define visual culture for their readerships. The advertising ecosystem that funds them depends on the consumer confidence the bubble provides. The magazine is not simply a publication; it is a material demonstration of the standards it promotes, its own physical quality confirming the lifestyle it advocates.",
+        chainActive: ["aesthetic", "spending"],
+      },
+    ],
+    "1987": [
+      {
+        title: "Bubble Architecture",
+        body: "Resort hotel construction reaches a peak in 1987 as land speculation profits are reinvested in leisure infrastructure. Architects are commissioned for projects of unusual ambition: full-service ski complexes, coastal hotel compounds, golf resorts that incorporate serious art collections. The buildings are often striking — commissioned from architects given real creative latitude by clients whose profits have made cost a secondary consideration. The physical legacy of the bubble includes both follies and genuine achievements.",
+        chainActive: ["aesthetic", "asset-surge", "real-estate"],
+      },
+      {
+        title: "The Automobile as Status Object",
+        body: "The automobile reaches peak status function in 1987. Toyota Soarer, Nissan Fairlady Z, the Honda NSX in development — domestic luxury vehicles calibrated to serve aspiration. Corporate purchasing of European imports — BMW, Mercedes, Porsche — is significant and visible. Car design and advertising in 1987 is inseparable from the aspirational aesthetic of City Pop music videos, the coastal drive as emblem of the good life made available by prosperity.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+      {
+        title: "The Commercial Design Boom",
+        body: "Japanese graphic design, industrial design, and architecture are experiencing an unusual productive period in 1987 funded by corporate and government commissions. Companies are spending on design differentiation — packaging, identity systems, retail environments. Advertising agencies are producing work of genuine visual sophistication funded by clients whose budgets are not constrained. The bubble is indirectly funding a golden age of commercial design that will later be recognized as a distinct period in Japanese visual culture.",
+        chainActive: ["aesthetic", "spending", "cheap-money"],
+      },
+      {
+        title: "Fashion Week and Global Recognition",
+        body: "Japanese designers are fully integrated into the international fashion calendar by 1987. Their Paris and Milan collections are received seriously by the Western press. The relationship between bubble-era domestic spending and international recognition is direct: the Japanese market's scale provides financial stability that frees designers to take creative risks internationally. The domestic consumer who buys Comme des Garçons in Aoyama is subsidizing the Paris shows that give the brand its global meaning.",
+        chainActive: ["aesthetic", "spending"],
+      },
+    ],
+    "1988": [
+      {
+        title: "Peak Luxury",
+        body: "In 1988 the Japanese luxury goods market is consuming roughly 20% of the world's supply of certain Hermès products. Department stores report waiting lists for Vuitton bags measured in months. The consumption is not primarily about the objects — it is about participation in a visible culture of prosperity. The bags and scarves are social signals, precisely legible within their context. The brand is not selling a product; it is selling membership in a status category that the bubble has made broadly accessible.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+      {
+        title: "Art as Investment and Statement",
+        body: "Japanese corporations and individuals enter the international art market in 1988 with purchasing power that alarms Western observers. Impressionist masterworks, contemporary art, old masters — all are acquired at record prices. The art collection serves two simultaneous functions: financial investment and cultural statement. Japanese buyers are purchasing not just art but cultural authority, demonstrating that Japan's economic ascendancy is not merely commercial but civilizational. The acquisitions will be reassessed severely when the bubble collapses.",
+        chainActive: ["aesthetic", "spending", "asset-surge"],
+      },
+      {
+        title: "The Golf Membership Bubble",
+        body: "Golf club membership certificates in 1988 are trading at prices that make them among Japan's most significant speculative assets. Some certificates have appreciated more rapidly than the land they represent. The golf course as financial instrument has separated entirely from the golf course as recreational facility. This dissociation — where the speculative value of an object completely detaches from its use value — is one of the clearest signs that the bubble's logic has become self-referential.",
+        chainActive: ["aesthetic", "asset-surge", "real-estate"],
+      },
+      {
+        title: "Fashion as Social Architecture",
+        body: "The young urban professional of 1988 Tokyo is defined in part by their brand relationships. Which labels they wear, which stores they frequent, which restaurants they can afford — these choices constitute a social grammar with precise gradations. Fashion is not merely consumption; it is a system for locating oneself in a hierarchy whose rankings matter enormously to participants. The bubble did not create this function for fashion — it made it available to a much larger population than had previously been able to participate.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+    ],
+    "1989": [
+      {
+        title: "Auction Records and National Pride",
+        body: "Japanese buyers set multiple record prices at major international auction houses in 1989. The Sunflowers sale and the Bal au Moulin de la Galette purchase attract global attention. Japan's presence in the international art market reaches its historical peak. The acquisitions are understood domestically as evidence of cultural maturity — Japan can now purchase not just manufactured goods but the cultural objects that Western civilization considers its greatest achievements. The pride is genuine; the prices are not sustainable.",
+        chainActive: ["aesthetic", "spending", "asset-surge"],
+      },
+      {
+        title: "The Concept Store Experience",
+        body: "Retail design in 1989 has moved beyond the simple display of goods toward the creation of immersive experience environments. Flagship stores for fashion brands are designed by significant architects and treated as cultural institutions. Shopping is positioned as an aesthetic practice, not merely a transaction. The store that is also an art gallery, that commissions exclusive installations, that serves coffee in a designed cafe adjacent to the product floor — these are inventions of the bubble retail economy.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+      {
+        title: "Luxury Real Estate Design",
+        body: "The interior design of high-end residential properties in 1989 reflects peak bubble consumption: Italian marble bathrooms, custom kitchens with imported fixtures, design-forward appliances, carefully sourced art on designed walls. The domestic environment has become a complete display space for the owner's taste and resources. Interior design magazines provide both aspiration and instruction. The market for designers, craftspeople, and imported materials is at its maximum.",
+        chainActive: ["aesthetic", "real-estate", "spending"],
+      },
+      {
+        title: "The Holiday as Aesthetic Performance",
+        body: "Overseas travel in 1989 is an aesthetic experience as much as a vacation. Where you went, which hotel you stayed in, what you brought back — these details are reportable on return. Travel agencies sell aspirational packages calibrated to match the social function holidays have acquired: Guam for the mass market, Paris and Rome for the ambitious. The holiday photo album is a record not just of experience but of achieved aspiration, shared with colleagues who understand its precise social meaning.",
+        chainActive: ["aesthetic", "spending", "wealth-effect"],
+      },
+    ],
+    "1990": [
+      {
+        title: "The Art Market Corrects",
+        body: "As the Nikkei falls in 1990, the speculative logic driving art purchases begins to falter. Corporate art programs that were expanding in 1988 are reviewing acquisitions. Individual collectors who borrowed to buy are recalculating. The relationship between stock market performance and art market confidence is direct and rapid. Some bubble-era art purchases will never appreciate from their purchase price. The cultural authority that the acquisitions were meant to demonstrate is complicated by the financial losses they now represent.",
+        chainActive: ["aesthetic", "tightening", "collapse"],
+      },
+      {
+        title: "Fashion Turns Quieter",
+        body: "The visual excess of peak bubble fashion gives way in 1990 to something more considered. Designers begin exploring restraint. The maximalist consumption signaling of 1988 starts to read as slightly crude — a problem of timing, not taste. Some of this shift is genuine aesthetic evolution; some is economic anxiety finding expression in a lower visual register. The fashion industry senses the cultural temperature before it can articulate it, and adjusts its proposals accordingly.",
+        chainActive: ["aesthetic", "tightening"],
+      },
+      {
+        title: "Department Store Contraction",
+        body: "Footfall in major Ginza and Shibuya department stores begins declining in 1990. Luxury goods sales hold for longer than other categories — brand consumption is socially sticky and the last to go — but the growth trajectory has reversed. The retail infrastructure built during the bubble is dimensioned for a market that no longer exists at the same scale. Empty floors in stores designed for crowds are one of 1990's clearest visual indicators of changing conditions.",
+        chainActive: ["aesthetic", "tightening", "collapse"],
+      },
+      {
+        title: "Assets Become Problems",
+        body: "Corporate art collections, resort hotel properties, and golf course memberships acquired at peak valuations are becoming balance sheet problems in 1990. Assets purchased as investments cannot be sold without realizing substantial losses. The aesthetic consumption of the bubble years — the art, the architecture, the resort hotels — is being reassessed as financial liability rather than cultural achievement. The same objects mean different things when the economy surrounding them changes.",
+        chainActive: ["aesthetic", "collapse", "real-estate"],
+      },
+    ],
+    "1991": [
+      {
+        title: "Aesthetic Deflation",
+        body: "The visual culture of 1991 is measurably different from 1988. The confident luxury aesthetic gives way to something more modest and functional. Fashion magazines adjust their aspirational content to match a readership whose economic reality contradicts the lifestyle they were previously selling. The shift is not dramatic — no single issue announces the change — but the cumulative effect is a lowering of the visual temperature across every category that the bubble had heated.",
+        chainActive: ["aesthetic", "collapse", "lost-decade"],
+      },
+      {
+        title: "Luxury After the Crash",
+        body: "The relationship between Japanese consumers and European luxury brands shifts substantially after 1991. Purchases become less frequent and more deliberate. The waiting lists that defined peak bubble consumption empty. Brands that opened Tokyo flagships at considerable expense adjust their expectations for the Japanese market. The structural importance of Japanese luxury consumption does not disappear — it contracts and becomes less reflexive, more considered. The brands adapt; the market they adapted to does not return.",
+        chainActive: ["aesthetic", "collapse", "lost-decade"],
+      },
+      {
+        title: "The Architecture Remains",
+        body: "The resort hotels, corporate headquarters, and retail palaces of the bubble years remain as physical monuments to the era's ambitions. Some are white elephants — overbuilt, underused, impossible to sell. Others are genuinely valuable additions to the built environment, commissioned from serious architects given real creative latitude. The physical legacy of the bubble is uneven: follies alongside achievements, excess alongside genuine quality. Time will sort them, but slowly.",
+        chainActive: ["aesthetic", "real-estate", "lost-decade"],
+      },
+      {
+        title: "Street Fashion Survives",
+        body: "The street fashion subcultures of Harajuku are less dependent on general prosperity than luxury consumption, and they survive the bubble's end with their creative energy largely intact. The young people constructing identities through fashion in 1991 Harajuku are doing so with less money than their counterparts in 1988, but with the same intensity of purpose. The bubble did not create street fashion and the crash does not kill it. Some forms of cultural production are resilient to economic conditions in ways that luxury consumption is not.",
+        chainActive: ["aesthetic"],
+      },
+    ],
+  },
 
-  /* ══════════════ ECONOMY ══════════════ */
-  economy: [
-    {
-      title: "Japan's Postwar Economic Miracle",
-      body: "Japan's recovery from World War II devastation to the world's second-largest economy by 1968 was among the most remarkable economic achievements of the twentieth century. The combination of low postwar wages, technology transfer from American occupation, protected domestic markets, high household savings rates, and coordinated industrial policy through MITI produced sustained growth averaging nearly 10% annually through the 1960s. By 1985, Japan had achieved prosperity broadly distributed across its society: high homeownership, near-universal secondary education, functional universal healthcare, and corporate employment structures providing significant long-term stability. This prosperity was the foundation on which the bubble was built.",
-      chainActive: ["plaza-accord"],
-    },
-    {
-      title: "The Plaza Accord: September 22, 1985",
-      body: "On September 22, 1985, finance ministers and central bank governors of the G5 nations — the United States, Japan, West Germany, France, and the United Kingdom — met at the Plaza Hotel in New York and agreed to intervene collectively in currency markets to depreciate the US dollar. The US had run large trade deficits through the early 1980s, fueled partly by a strong dollar that made American exports expensive and imports cheap. Japan's trade surplus with the United States was a particular political irritant. The Plaza Accord was, in effect, a negotiated solution to American political pressure: an agreement to allow the yen to strengthen significantly.",
-      chainActive: ["plaza-accord"],
-    },
-    {
-      title: "The Yen's Rise: From 240 to 120",
-      body: "The yen's appreciation following the Plaza Accord was rapid and substantial. From approximately 240 yen per dollar in late 1985, the exchange rate moved to around 150 per dollar by 1986, and continued strengthening toward 120 by 1987–1988. For Japanese exporters — the corporations that had driven the economic miracle — this was devastating. A Toyota sold at the same dollar price in the United States now yielded half as many yen as it had before the accord. The export-led growth model that had defined Japan's postwar success was suddenly under severe pressure, and the government needed an alternative strategy to maintain economic momentum.",
-      chainActive: ["plaza-accord", "yen"],
-    },
-    {
-      title: "Endaka: The Strong Yen Shock",
-      body: "The period of rapid yen appreciation was called endaka (high yen), and it precipitated a genuine crisis of confidence in Japan's export-oriented economy. Manufacturing companies shifted production overseas to escape the currency penalty. Economists projected slow growth or recession. The government faced significant political pressure to respond. The Bank of Japan's response — dramatic interest rate cuts — was the policy decision that lit the fuse of the bubble. Understanding endaka is essential for understanding why Japanese monetary policy in 1986–1987 was as aggressive as it was: the alternative appeared to be a severe economic contraction that would damage both corporate Japan and the ruling Liberal Democratic Party's electoral position.",
-      chainActive: ["yen", "boj-rates"],
-    },
-    {
-      title: "The Bank of Japan's Interest Rate Cuts",
-      body: "Between January 1986 and February 1987, the Bank of Japan cut its official discount rate from 5.0% to 2.5% — an extraordinarily large reduction over a short period. The intention was to stimulate the domestic economy to compensate for export weakness. Cheap credit would encourage investment, spending, and growth. The policy worked in a limited sense: Japan did not enter recession. But the unintended consequences were vast. Cheap money flooded into asset markets rather than productive investment. Interest rates at 2.5% made borrowing essentially free in real terms, and Japanese businesses and individuals borrowed aggressively — not to build factories, but to buy land and stocks.",
-      chainActive: ["boj-rates", "cheap-money"],
-    },
-    {
-      title: "How Asset Bubbles Form: The Mechanism",
-      body: "An asset bubble forms when rising prices attract additional buyers who expect prices to continue rising, creating a self-reinforcing cycle disconnected from fundamental value. In Japan after 1986, cheap money created the initial push: borrowers accessed credit cheaply and deployed it in land and equities. Rising land prices increased the collateral value of existing property, enabling further borrowing against it. Banks, seeing their loan books backed by appreciating collateral, increased lending. The cycle was not irrational from any individual participant's perspective — the problem was systemic. Each individual decision to borrow against rising assets was locally rational and collectively catastrophic, a classic example of what economists call a coordination failure.",
-      chainActive: ["cheap-money", "asset-surge"],
-    },
-    {
-      title: "Land Prices: The Numbers",
-      body: "The land price inflation of bubble-era Japan produced statistics of almost incomprehensible magnitude. At the bubble's peak in 1989–1990, the assessed value of all land in Japan was estimated at approximately $20 trillion — roughly four times the assessed value of all land in the United States. Tokyo's Chiyoda ward, containing the Imperial Palace, was valued at more than the entire state of California. A single square meter of prime commercial land in the Ginza district changed hands at prices exceeding ¥30 million. These were not theoretical numbers: they were the basis for bank lending decisions, corporate balance sheets, and the collateral calculations that underpinned Japan's financial system.",
-      chainActive: ["asset-surge", "real-estate"],
-    },
-    {
-      title: "The Tokyo Real Estate Paradox",
-      body: "The practical consequence of land price inflation for ordinary Tokyo residents was severe and direct. A middle-class family that had not purchased land before the bubble found homeownership effectively impossible in central Tokyo by the late 1980s. Average housing loans extended to 50-year terms, with children expected to inherit the debt. Workers commuted two to three hours each direction from distant suburbs where land remained marginally affordable. The spatial reorganization of Tokyo's population — crowding into distant areas while central land values soared — was a direct consequence of the bubble's most visible failure: the misallocation of an entire city's residential geography driven by speculative dynamics rather than human need.",
-      chainActive: ["asset-surge", "real-estate", "spending"],
-    },
-    {
-      title: "The Nikkei 225: A Market Defying Gravity",
-      body: "The Nikkei 225 stock index rose from approximately 12,000 in 1985 to 38,915 on December 29, 1989 — a gain of more than 220% in four years. Price-to-earnings ratios for Japanese stocks reached 60–80 times earnings, compared to 15–20 in the United States — levels that conventional valuation methods could not justify. Analysts developed elaborate alternative frameworks: land holdings, cross-shareholding values, and long-term growth projections were used to argue that Japanese stocks were rationally priced. In retrospect, these frameworks were rationalizations. The market was running on momentum and cheap credit rather than fundamental value, and the rationalizations were performing the function of providing intellectual cover for continued participation.",
-      chainActive: ["cheap-money", "asset-surge"],
-    },
-    {
-      title: "Cross-Shareholding and the Keiretsu System",
-      body: "A distinctive feature of Japanese corporate structure — cross-shareholding among affiliated companies within industrial groups (keiretsu) — amplified the bubble's dynamics while also obscuring them. Companies held each other's shares as permanent, non-traded positions. Rising stock prices improved the balance sheets of every company within a keiretsu simultaneously. These paper gains could be used as collateral for additional borrowing. The system created mutual reinforcement of apparent wealth — but it also meant that when prices fell, the losses would be distributed throughout the same interlocking structure. The keiretsu system, which had promoted postwar industrial development efficiently, became a transmission mechanism for bubble-era excess and subsequent collapse.",
-      chainActive: ["asset-surge", "real-estate"],
-    },
-    {
-      title: "The Banking System's Accelerating Role",
-      body: "Japanese banks were the primary channels through which cheap money became bubble. Loan growth accelerated sharply after 1986. Real estate and construction lending grew at extraordinary rates; by 1989, real estate-related lending represented a substantial fraction of major banks' total loan portfolios. Bank examiners and the Ministry of Finance were aware of the concentration of risk but did not intervene decisively. The regulatory culture prioritized systemic stability over individual bank discipline — a preference that ultimately produced the systemic instability it was designed to prevent. The political economy of bank regulation — the close relationships between banks, regulators, and the ruling party — made decisive intervention structurally difficult.",
-      chainActive: ["cheap-money", "asset-surge", "real-estate"],
-    },
-    {
-      title: "Japanese Corporations Go Global",
-      body: "The bubble era's combination of cheap capital, strong yen, and high confidence produced a wave of Japanese corporate acquisitions abroad. Sony acquired Columbia Pictures (1989) for $3.4 billion; Mitsubishi Estate purchased Rockefeller Center (1989) for $846 million; Matsushita acquired MCA (1990) for $6.6 billion. Golf courses, hotels, and real estate across Hawaii, California, and Australia changed hands. These acquisitions attracted significant American political attention and cultural anxiety. In retrospect, many were poorly timed and overpriced — purchased at peak bubble confidence with capital that would prove expensive. Sony and Matsushita both took significant write-downs on entertainment acquisitions within years of purchase.",
-      chainActive: ["cheap-money", "wealth-effect", "real-estate"],
-    },
-    {
-      title: "The Wealth Effect: Paper Gains Change Behavior",
-      body: "The wealth effect describes how rising asset values change consumer and corporate behavior even when the gains are unrealized. A Japanese family whose home had tripled in value by 1988 felt richer — and spent accordingly — even though they had not sold the home and held no liquid gains. Corporate managers whose company stock was at record highs approved expansion projects and entertainment budgets that calm analysis might not have justified. The psychological dimension of the bubble — its effect on confidence, aspiration, and risk tolerance — was as important as its financial mechanics. The wealth effect amplified the bubble's stimulus far beyond what interest rates alone could explain.",
-      chainActive: ["asset-surge", "wealth-effect", "spending"],
-    },
-    {
-      title: "Warning Signs: What the Data Showed",
-      body: "By 1987–1988, multiple indicators suggested that Japanese asset markets had departed from historical relationships with fundamental values. Price-to-earnings ratios for stocks, rent-to-price ratios for real estate, and historical land price trends all indicated severe overvaluation. The Bank for International Settlements warned about credit growth. Some economists and journalists published analyses identifying the bubble explicitly. Markets and policymakers largely dismissed these signals with consistent explanations: Japan was different, its institutions were sound, its growth prospects justified unconventional valuations, the warnings were based on models that didn't understand Japanese specifics. These arguments were plausible. They were also wrong. The warnings, in retrospect, were accurate in every substantive detail.",
-      chainActive: ["asset-surge", "wealth-effect"],
-    },
-    {
-      title: "The Bank of Japan Tightens: 1989–1990",
-      body: "The decision to raise interest rates — made by Bank of Japan Governor Yasushi Mieno — began in May 1989. The discount rate rose from 2.5% to 6.0% between May 1989 and August 1990, a reversal as dramatic as the preceding cuts. The intention was to slow asset price inflation without causing a recession. The mechanism of bubble collapse, however, proved more severe than anticipated. Rising rates increased the cost of the borrowing that had sustained the bubble; they also triggered a fundamental reassessment of asset values. The market that had inflated rapidly on cheap credit deflated — but not as quickly as it had risen, and the unwinding took years longer than the inflation had taken.",
-      chainActive: ["tightening"],
-    },
-    {
-      title: "The Crash: Nikkei from 38,915 to 14,000",
-      body: "The Nikkei peaked on December 29, 1989 and declined continuously through 1990. By October 1990, it had lost approximately 48% of its peak value. Land prices, slower to react because real estate is less liquid than equities, remained elevated through 1991 before beginning their own prolonged decline. The asymmetry between the rapid accumulation and gradual deflation of bubble assets defined the character of Japan's economic crisis: unlike the sharp crashes of 1929 or 2008, Japan's adjustment was slow, partial, and persistently incomplete. Asset prices fell for a decade without fully correcting to pre-bubble levels, trapping the economy in a deflationary dynamic that proved resistant to conventional policy responses.",
-      chainActive: ["tightening", "collapse"],
-    },
-    {
-      title: "Hidden Losses: The Banking System's Crisis",
-      body: "As asset prices fell, Japanese banks carried loans backed by collateral whose value had collapsed. The standard banking response — recognizing bad loans, writing off losses, recapitalizing — was resisted by both banks and regulators who feared that transparent acknowledgment of losses would trigger depositor panic and systemic failure. Instead, banks continued rolling over non-performing loans to insolvent companies, maintaining the fiction of solvency while slowly deteriorating. This regulatory forbearance — described by economists as 'extend and pretend' — delayed Japan's banking crisis without resolving it, ultimately producing a more severe contraction than earlier intervention might have caused. The strategy that protected stability in the short term ensured prolonged stagnation.",
-      chainActive: ["collapse", "lost-decade"],
-    },
-    {
-      title: "The Lost Decade: Deflation and Stagnation",
-      body: "Japan's economic performance from 1991 to approximately 2001 — the period retrospectively called the Lost Decade — was characterized by deflation, slow growth, persistent unemployment above historical norms, and repeated unsuccessful attempts at fiscal stimulus. GDP growth averaged less than 1% annually. Deflation created perverse incentives: consumers deferred spending because goods would be cheaper in the future; companies deferred investment for the same reason. The deflationary trap proved extraordinarily difficult to escape. Japan's experience became a global template for what economists called 'balance-sheet recession' — the distinctive pathology of a post-bubble economy in which private sector debt repayment crowds out growth-generating activity.",
-      chainActive: ["collapse", "lost-decade"],
-    },
-    {
-      title: "Policy Responses and Their Limits",
-      body: "Japanese fiscal policy through the 1990s attempted to substitute government spending for collapsed private demand. Infrastructure investment was deployed at massive scale — bridges, roads, public buildings across the country. The results were consistently disappointing relative to expenditure. The problem was structural: banks could not lend effectively because their balance sheets were impaired; corporations could not invest because they were paying down bubble-era debt; consumers could not spend confidently because asset prices continued falling. Each cycle of stimulus produced temporary improvement followed by renewed stagnation. Japan's experience informed subsequent global economic policy, particularly the debates following the 2008 financial crisis, about the limits of conventional macroeconomic responses to balance-sheet recessions.",
-      chainActive: ["lost-decade"],
-    },
-    {
-      title: "Lessons of the Japanese Bubble",
-      body: "The Japanese bubble economy of 1985–1991 has become a canonical case study in monetary economics, financial regulation, and political economy. Its lessons are debated but reasonably clear: asset bubbles can persist far longer than rational analysis suggests; financial institutions have structural incentives to participate in bubbles rather than resist them; regulatory capture can neutralize official oversight; and the unwinding of major asset bubbles produces prolonged economic pain regardless of policy response. The Japanese case also illustrates the limits of policy: the bubble was not caused by obvious incompetence, and its resolution was not delayed by obvious negligence. It was a systemic failure produced by the interaction of individually rational decisions within a structurally fragile system.",
-      chainActive: ["plaza-accord", "collapse", "lost-decade"],
-    },
-  ],
+  /* ══════════════════════════════════════
+     ECONOMY
+  ══════════════════════════════════════ */
+  economy: {
+    "1985": [
+      {
+        title: "The Plaza Accord",
+        body: "On September 22, 1985, finance ministers from the United States, Japan, West Germany, France, and the United Kingdom meet at the Plaza Hotel in New York and agree to coordinate market intervention to weaken the overvalued dollar. The agreement is reached within a single day of negotiations. Japan agrees to allow the yen to appreciate. No one present fully anticipates the chain of domestic consequences — the rate cuts, the cheap money, the asset inflation — that will follow from this single diplomatic agreement.",
+        chainActive: ["plaza-accord"],
+      },
+      {
+        title: "The Yen Appreciates",
+        body: "The yen strengthens dramatically after the Plaza Accord. Against the dollar, it moves from approximately 240 yen per dollar before September 1985 to around 150 yen by late 1986 — a 38% appreciation in roughly a year. For Japanese exporters — Toyota, Sony, Hitachi — this is devastating: products priced for a 240-yen dollar become uncompetitive at 150. The export economy that had driven Japan's growth for a generation is suddenly under severe pressure.",
+        chainActive: ["plaza-accord", "yen"],
+      },
+      {
+        title: "The Export Recession",
+        body: "Japan enters an export-driven recession in 1985–1986. Manufacturing contracts. Unemployment rises from very low levels to merely low ones, but the direction is wrong. Political pressure on the Bank of Japan and the government to stimulate domestic demand is significant and real. The Ministry of Finance and the Bank of Japan begin designing a response. Their diagnosis is correct — domestic demand must replace export demand — but the instruments they choose will prove far more powerful than intended.",
+        chainActive: ["plaza-accord", "yen"],
+      },
+      {
+        title: "The Policy Response Forms",
+        body: "The Japanese government and Bank of Japan begin formulating their response to the yen shock in 1985. The outlines of what becomes bubble policy are visible: interest rate cuts to stimulate domestic investment, fiscal measures to replace lost export demand, financial deregulation to allow capital to allocate more freely. Each decision is reasonable in isolation and justified by economic logic. Their interaction — cheap money meeting deregulated finance meeting rising asset prices — produces consequences none of the policymakers anticipated.",
+        chainActive: ["plaza-accord", "boj-rates"],
+      },
+    ],
+    "1986": [
+      {
+        title: "The Bank of Japan Cuts Rates",
+        body: "The Bank of Japan cuts its official discount rate five times between January 1986 and February 1987, moving from 5% to a then-historic low of 2.5%. The policy intention is to stimulate domestic investment and offset the export recession from yen appreciation. It succeeds in the short term: domestic demand recovers. It also provides the cheap money that will inflate the asset bubble. The rate cuts are the single most consequential policy decision of the bubble era, though their consequences are not yet visible in 1986.",
+        chainActive: ["boj-rates", "cheap-money"],
+      },
+      {
+        title: "Financial Deregulation",
+        body: "Japan's financial deregulation through the mid-1980s removes restrictions on bank lending, expands permissible collateral categories, and begins internationalizing Japanese finance. In 1986 these are measured reforms to an overly constrained system — sensible adjustments that most economists support. Their interaction with cheap money will prove dangerous: deregulated banks with access to cheap funding and permission to lend against land and equity collateral are structurally incentivized to expand lending indefinitely as asset prices rise.",
+        chainActive: ["boj-rates", "cheap-money"],
+      },
+      {
+        title: "Land Prices Begin Rising",
+        body: "Japanese commercial land prices in major urban areas begin their characteristic bubble appreciation in 1986. The initial increases are modest and defensible — there is genuine demand for urban space in a growing economy, and years of controlled land use have created real scarcity. The appreciation is initially interpreted as a correction of undervaluation. What distinguishes a correction from a bubble is only apparent in retrospect: corrections stop when they reach fundamental value. This one does not stop.",
+        chainActive: ["cheap-money", "asset-surge"],
+      },
+      {
+        title: "Corporations Discover Financial Engineering",
+        body: "As interest rates fall and land values rise, Japanese corporations discover an activity more profitable in the short term than their actual operations: financial investment. The practice of zaitech — engineering treasury profits from cheap borrowing against rising collateral — begins at scale in 1986. Corporations borrow cheaply against land to buy stocks. Stocks rise partly because corporations are buying them with borrowed money. The loop is in operation. Its self-reinforcing character is not yet alarming because the direction is up.",
+        chainActive: ["cheap-money", "asset-surge", "spending"],
+      },
+    ],
+    "1987": [
+      {
+        title: "The Nikkei Through Black Monday",
+        body: "The Nikkei rises consistently through 1987. The October global market crash — Black Monday — causes a severe initial drop in Tokyo, but the Nikkei recovers faster than any other major market. The divergence is noted internationally: Japan's financial system appears to operate by different rules. Domestic observers interpret the rapid recovery as evidence of fundamental strength. The interpretation is not entirely wrong — Japan's economy in 1987 is genuinely strong — but it reinforces the confidence that is becoming recklessness.",
+        chainActive: ["asset-surge", "cheap-money"],
+      },
+      {
+        title: "Land Prices Defy Fundamental Value",
+        body: "Tokyo land prices in 1987 reach valuations that resist any justification based on rental income or productive use. The frequently cited calculation — that the land under the Imperial Palace is worth more than all of California — is not technically precise, but the underlying comparison is directionally accurate. Fundamental analysis has been irrelevant to land pricing for over a year. The market is pricing in continued appreciation, a self-fulfilling expectation that holds only as long as the expectation is shared.",
+        chainActive: ["asset-surge", "real-estate"],
+      },
+      {
+        title: "Zaitech at Scale",
+        body: "The practice of corporate financial speculation reaches significant scale in 1987. Companies across sectors — manufacturing, retail, construction — are running treasury operations that exploit the spread between cheap borrowing costs and rising asset returns. The reported profits improve their stock prices, making their equity collateral more valuable, allowing them to borrow more. For corporate executives, refusing to participate in zaitech means voluntarily reporting lower profits than competitors who are participating. The incentive to join is nearly irresistible.",
+        chainActive: ["cheap-money", "asset-surge", "wealth-effect"],
+      },
+      {
+        title: "Bank Lending and the Collateral Loop",
+        body: "Japanese banks in 1987 are primarily lending against land collateral valued at current market prices. When land appreciates, the same land supports more lending. The increased lending drives spending and investment that supports land prices. The circularity is visible to analysts who examine it carefully. It is rationalized by participants through the belief that land prices cannot fall — a belief grounded in the historical experience of a country where land has never declined in price since the war. History is about to stop being a reliable guide.",
+        chainActive: ["cheap-money", "asset-surge", "real-estate"],
+      },
+    ],
+    "1988": [
+      {
+        title: "The Nikkei Passes 25,000",
+        body: "The Nikkei crosses 25,000 in 1988, more than doubling its 1985 level of approximately 12,000. Institutional investors, retail investors, and corporate treasury operations are all participating. The distinction between investment and speculation has dissolved — speculative behavior produces the same returns as investment, and is rationalized in the same terms. The financial press in 1988 is full of analysis explaining why current valuations are justified. Most of the analysis will prove to have been wrong.",
+        chainActive: ["asset-surge", "wealth-effect", "spending"],
+      },
+      {
+        title: "Real Estate as Pure Financial Asset",
+        body: "Property in Tokyo is being bought and sold as a financial asset in 1988 with minimal reference to its physical characteristics. Location, building quality, and rental income — the traditional determinants of property value — matter less than the expected trajectory of appreciation. Holding periods shorten as trading profits compete with rental yields. The connection between a property's productive capacity and its market price, always indirect in real estate, has in 1988 become so attenuated as to be nearly absent.",
+        chainActive: ["asset-surge", "real-estate", "wealth-effect"],
+      },
+      {
+        title: "The Wealth Effect in Full Operation",
+        body: "The combined appreciation of stocks and land has made many Japanese households notionally wealthy in 1988. People who bought apartments in the early 1980s are sitting on assets worth multiples of their purchase price. This paper wealth changes behavior: spending rises, saving rates fall, confidence expands. The wealth effect is real and measurable in consumption data even though the underlying asset values will prove temporary. You can spend notional wealth. The spending creates real economic activity. The contraction of spending when notional wealth evaporates creates real economic damage.",
+        chainActive: ["asset-surge", "wealth-effect", "spending"],
+      },
+      {
+        title: "International Acquisition",
+        body: "Japanese corporations and individuals begin major international acquisition programs in 1988. Rockefeller Center, Pebble Beach Golf Course, Columbia Pictures, major Impressionist works — the acquisitions are global news. Japan's economic confidence has become a geopolitical phenomenon, reshaping how the United States and Europe understand their relationship to Japanese capital. Many of these acquisitions will be sold back within a decade at substantial losses. In 1988, that outcome is invisible.",
+        chainActive: ["asset-surge", "spending", "wealth-effect"],
+      },
+    ],
+    "1989": [
+      {
+        title: "The Policy Tightening Begins",
+        body: "The Bank of Japan, recognizing the asset price inflation as a problem requiring intervention, begins raising interest rates in May 1989. The official discount rate rises from 2.5% to 3.25%, then to 3.75%, then to 4.25%, then to 5.25%, and finally to 6% in August 1990 — a rise of 3.5 percentage points in fifteen months. The tightening comes after four years of excessive looseness. When it finally arrives, it is too rapid. The policy errors that inflated the bubble operate in reverse to collapse it.",
+        chainActive: ["tightening", "asset-surge"],
+      },
+      {
+        title: "December 29, 1989 — The Peak",
+        body: "The Nikkei closes at 38,915.87 on December 29, 1989 — the last trading day of the year. This is the all-time high. The following day is a holiday. On January 4, 1990, the market opens and begins declining. It will not see 38,915 again for thirty-four years — and even the 2024 recovery will be measured in a currency worth substantially less. Nobody on December 29 knows they are selling into the all-time peak. The knowledge is only available in retrospect.",
+        chainActive: ["tightening", "asset-surge", "collapse"],
+      },
+      {
+        title: "Land Price Peak",
+        body: "Land prices in the Tokyo metropolitan area reach their historical maximum in late 1989 and early 1990. The total assessed value of Japanese land exceeds the total value of all land in the United States by a factor variously estimated between two and five. These figures are not credible against any fundamental analysis of land's productive value. But fundamental analysis has been dismissed as irrelevant for three years. Markets can remain irrational longer than analysts can remain credible.",
+        chainActive: ["asset-surge", "real-estate", "tightening"],
+      },
+      {
+        title: "The Consumer Economy at Its Peak",
+        body: "Japanese consumer spending in 1989 is at its real historical maximum across nearly every category: department store sales, foreign travel, automobile purchases, home purchases, restaurant spending. The macroeconomic conditions for this consumption — full employment, rising nominal wages, low consumer price inflation, high asset values, cheap credit — will not recombine in this configuration for a generation. 1989 is the peak not just of the stock market but of the society the stock market expressed.",
+        chainActive: ["wealth-effect", "spending", "asset-surge"],
+      },
+    ],
+    "1990": [
+      {
+        title: "The Nikkei Falls by Half",
+        body: "The Nikkei falls approximately 48% during 1990, from its December 1989 peak to roughly 20,000 by year end. This is the most severe sustained decline in a major market since the 1929–1932 contraction in the United States. The scale surprises even analysts who had predicted a correction. Corrections are measured in percentages of perhaps 10–20%. A 48% decline in a single year is not a correction; it is a repudiation. The distinction between what was expected and what actually happened will shape Japanese economic policy for a decade.",
+        chainActive: ["tightening", "collapse"],
+      },
+      {
+        title: "Land Prices Hold — For Now",
+        body: "Despite the Nikkei collapse, Japanese land prices are slow to respond through 1990. Banks continue carrying land collateral at near-peak valuations. The refusal to mark down land values allows the banking sector to appear adequately capitalized when it is not. The delay in land price adjustment is not accidental — it is the result of active regulatory forbearance. The banking regulators know that transparent land revaluation would reveal insolvency throughout the system. They choose delay. The delay will make the eventual reckoning more severe.",
+        chainActive: ["tightening", "collapse", "real-estate"],
+      },
+      {
+        title: "The Banking System's Hidden Crisis",
+        body: "The Japanese banking system in 1990 is carrying enormous loans against collateral that has declined by half or more. The loans are not yet classified as non-performing — the collateral, at its previous valuation, covered them — but against realistic current valuations, the banks are insolvent. The systemic choice is between transparent acknowledgment, which risks depositor panic and bank runs, and continued forbearance, which defers the reckoning. The system chooses forbearance. It will choose it again in 1991, 1992, 1993, and beyond.",
+        chainActive: ["collapse", "tightening"],
+      },
+      {
+        title: "Political Paralysis",
+        body: "The policy response to the bubble collapse is inadequate in 1990 partly because the scale of the problem is not acknowledged and partly because acknowledging it would require politically costly admissions. The Liberal Democratic Party, which has governed Japan continuously since 1955, is not constituted to manage a crisis that requires telling the electorate that the preceding decade was built on unsustainable foundations. The administrative guidance model — bureaucratic consensus management of the economy — is not designed for crises. It is designed to manage growth.",
+        chainActive: ["collapse", "tightening", "lost-decade"],
+      },
+    ],
+    "1991": [
+      {
+        title: "Land Prices Begin Their Fall",
+        body: "By 1991 land prices in major metropolitan areas begin declining in earnest. The commercial land that appreciated 300% since 1985 starts a sustained contraction that will continue for most of the decade. The collateral underpinning trillions of yen in bank lending is deteriorating rapidly against the valuations at which the loans were made. The banking crisis that has been managed through regulatory forbearance since 1990 becomes structurally unavoidable as the asset base continues to erode.",
+        chainActive: ["collapse", "real-estate", "lost-decade"],
+      },
+      {
+        title: "Non-Performing Loans Emerge",
+        body: "Banks begin disclosing non-performing loan levels in 1991, though the figures they report will later be revealed as dramatically understated. The disclosure process is managed to minimize market panic rather than accurately reflect reality. The gap between disclosed and actual non-performing loans persists for years, undermining the credibility of the figures and preventing accurate pricing of bank risk. The opacity that seemed to protect financial stability in the short term will make the eventual resolution more expensive.",
+        chainActive: ["collapse", "lost-decade"],
+      },
+      {
+        title: "Corporate Restructuring Begins",
+        body: "Japanese corporations in 1991 are beginning the restructuring they avoided during the bubble years. The lifetime employment system — the central social institution of postwar Japan — is being quietly renegotiated. Middle management is under review. Hiring freezes replace the aggressive recruitment drives of the late 1980s. The social contract that bound employee to corporation through mutual obligation is under stress for the first time in a generation. Its renegotiation will be prolonged, partial, and psychologically costly.",
+        chainActive: ["collapse", "lost-decade"],
+      },
+      {
+        title: "The Structure of the Lost Decade",
+        body: "The problems visible in 1991 — zombie banks, excess corporate capacity, overvalued land, debt loads that crowd out investment — will not be resolved quickly. Japan will spend most of the 1990s managing the consequences of the bubble without addressing its structural causes. Each attempt at fiscal stimulus produces temporary improvement followed by renewed stagnation. The lost decade is not the result of a single policy failure. It is the cumulative product of a system that chose, at each decision point, to defer pain rather than absorb it.",
+        chainActive: ["collapse", "lost-decade"],
+      },
+    ],
+  },
 
-  /* ══════════════ DAILY LIFE ══════════════ */
-  "daily-life": [
-    {
-      title: "The Salaryman's World",
-      body: "The salaryman (sararīman) — the male corporate employee with lifetime employment at a major Japanese company — was the central figure of bubble-era social organization. The system guaranteed employment, provided housing loans at favorable rates through company affiliations, and structured social identity around institutional belonging. Salarymen identified primarily with their employer: asked what they did, they named their company before their function. The bubble economy intensified this identity while also distorting it — expense accounts expanded, entertainment obligations multiplied, and the hours of work extended. The salaryman was both beneficiary and instrument of the bubble, his corporate loyalty enabling the institutional behavior that drove it.",
-      chainActive: ["wealth-effect", "spending"],
-    },
-    {
-      title: "The Commute",
-      body: "Tokyo's commuter rail system — the most intensively used in the world — carried the bubble economy's workforce to its center each morning. Trains on lines like the Chuo and Tozai carried passengers at densities requiring platform staff to physically push people into carriages. The commute was understood not as exceptional hardship but as a feature of working life in a major city, normalized through repetition and social expectation. Average commute times of 90 minutes each direction were common for workers who could not afford housing near their offices. The commute was also a consumption space: paperback manga, newspapers, and eventually portable cassette players structured the hours of daily transit.",
-      chainActive: ["real-estate", "spending"],
-    },
-    {
-      title: "The Expense Account",
-      body: "Corporate entertainment expense accounts (settai) were among the most socially significant features of bubble-era business culture. Companies routinely budgeted tens of thousands of dollars annually for entertainment per senior employee. Client dinners at high-end kaiseki restaurants, golf outings, and nights at hostess bars were standard business tools. The settai system was not understood as corruption — it was relationship maintenance, a legitimate investment in the human infrastructure of business. Restaurants, golf courses, and entertainment venues structured their pricing and service around the assumption of corporate expense accounts. When accounts contracted after 1991, entire sectors of the hospitality economy restructured simultaneously, producing a visible and rapid contraction of a previously thriving industry.",
-      chainActive: ["wealth-effect", "spending"],
-    },
-    {
-      title: "Midnight Taxis",
-      body: "A specific cultural marker of the bubble era's peak: the phenomenon of salarymen taking taxis home after the trains stopped running, typically around midnight, without checking the meter. Fares from central Tokyo to distant suburbs reached ¥15,000–¥30,000 — amounts employees would charge to company expense accounts without concern. Taxi drivers in central Tokyo experienced income growth during the bubble that had no precedent in the industry. The practice became so common that it generated its own vocabulary and was referenced in fiction, journalism, and political commentary as a symbol of the era's excess. It also signified the actual working hours: the trains stopped at midnight because that was when the work ended.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "Nomikai and After-Work Culture",
-      body: "Nomikai — mandatory after-work drinking with colleagues and superiors — was a structural feature of Japanese corporate culture that intensified during the bubble era. The social obligations of corporate employment extended well beyond working hours: attending nomikai was understood as professional responsibility, and declining repeatedly carried implicit career penalties. The izakaya (Japanese pub) became the primary venue — casual, affordable by corporate expense standards, and designed for extended group occupation. The cultural function of nomikai was genuine: it created informal relationships and trust that formal hierarchical structures did not support. Its costs — in time, social pressure, and alcohol consumption — fell primarily on junior employees with the least power to decline.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "Karaoke: From Bar to Box",
-      body: "Karaoke existed before the bubble — the technology was developed in the early 1970s — but its social form transformed during the 1980s. The early karaoke bar, where customers performed in front of strangers, gave way to the karaoke box: private rooms rented by the hour, allowing groups to perform for each other. The format spread rapidly through the mid-1980s, supported by the same corporate entertainment culture that funded nomikai and dinner outings. By the late 1980s, karaoke boxes were a standard feature of nighttime entertainment in every Japanese city. The format was also a significant export: karaoke boxes subsequently spread across Asia and eventually, in modified form, globally.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "Golf: The Mandatory Leisure",
-      body: "Golf's penetration of corporate culture during the bubble era was remarkable. The ability to play at a competent level became functionally a professional credential for managers and executives. Companies purchased club memberships — which could cost hundreds of millions of yen — as corporate assets. Golf outings with clients were major entertainment events. Learning to play, typically through professional lessons, was an expected professional investment. The geography of weekend Tokyo changed accordingly: early morning trains and highways carried golfers to courses several hours outside the city, built specifically to meet demand that the bubble had created. Golf was not primarily a sport during these years — it was a social obligation conducted in athletic form.",
-      chainActive: ["spending", "wealth-effect", "real-estate"],
-    },
-    {
-      title: "Overseas Tourism",
-      body: "Japanese overseas tourism expanded dramatically through the late 1980s. The combination of strong yen, rising disposable income, and expanded leisure infrastructure sent Japanese tourists to Hawaii, California, Europe, and Southeast Asia in unprecedented numbers. Japanese tourist groups became globally visible cultural presences, noted for organized behavior, comprehensive photography, and significant retail spending. Shopping patterns abroad — particularly purchases of European luxury goods at prices below Japan's import-inflated domestic retail — became a studied economic phenomenon. Overseas tourism was also a status activity: travel created social capital through destination prestige and the omiyage gifts it generated for colleagues and family members who had not gone.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "The Housing Question",
-      body: "The central practical failure of the bubble economy for ordinary Japanese was housing. Land prices had risen so dramatically by the late 1980s that homeownership in or near the major cities was effectively out of reach for young families who had not inherited property. The average Tokyo salary worker faced a housing market where purchase prices required 10–15 years of total gross income. Banks extended mortgage terms to 50 years, sometimes structured across generations. Young families who bought at bubble prices — encouraged by the expectation of continued appreciation — found themselves in severe negative equity after 1991. The housing market's dysfunction was the bubble's most direct personal harm, felt most acutely by the generation that came of age during its peak.",
-      chainActive: ["asset-surge", "real-estate", "wealth-effect"],
-    },
-    {
-      title: "Women in the Bubble Economy",
-      body: "The position of women in the bubble economy was defined by formal limitation and informal complexity. The Equal Employment Opportunity Law of 1985 required formal employment equality but created a two-track system in practice: career-track positions (sogoshoku) with advancement potential, occupied primarily by men; and clerical-track positions (ippanshoku) with limited advancement, occupied primarily by women. Office ladies (OL) — female clerical workers — were prominent in bubble-era corporate culture but largely excluded from the expense account dynamics and advancement opportunities that benefited their male colleagues. Women's spending power and consumer influence were nonetheless significant: fashion, cosmetics, and entertainment industries targeted female consumers explicitly and profitably.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "Youth Culture and the Freeter",
-      body: "The freeter (frītā) — a young person who moved between part-time jobs rather than entering stable corporate employment — was a phenomenon that began during the bubble era. Some freeters made this choice deliberately, preferring flexibility to corporate obligation. The bubble economy's low unemployment and high part-time wages made the lifestyle briefly sustainable. Post-bubble, however, the freeter status became less voluntary: corporate hiring contracted, permanent positions became harder to obtain, and a generation found itself in precarious employment not by choice but by circumstance. The freeter phenomenon was thus simultaneously a product of bubble-era prosperity — when the choice was economically viable — and of post-bubble contraction — when it became effectively involuntary.",
-      chainActive: ["spending", "collapse", "lost-decade"],
-    },
-    {
-      title: "The Convenience Store Revolution",
-      body: "7-Eleven Japan — operated not by the American parent company but by Japanese licensee Ito-Yokado — developed a retail model during the 1980s that became globally influential. The Japanese konbini offered a wider product range, higher food quality, longer opening hours, and more sophisticated logistics than any equivalent international format. ATM services, bill payment, photocopying, ticket sales, and hot food prepared on-site made the konbini a genuine daily necessity. The density of konbini penetration in urban Japan — rarely more than a five-minute walk between stores — transformed urban daily logistics in ways that became visible only retrospectively, when their absence elsewhere seemed strange to Japanese travelers abroad.",
-      chainActive: ["spending"],
-    },
-    {
-      title: "Food Culture at the Bubble's Peak",
-      body: "The bubble era produced unusual intensity of investment in food — both in high-end restaurant culture and in everyday quality expectations. Corporate entertainment spending supported kaiseki restaurants of extraordinary quality. The gourmet food floors (depachika) of major department stores offered imported European delicacies alongside Japanese regional specialties, positioning food consumption as cultural practice. The noodle stand, the izakaya, and the family restaurant coexisted with destination restaurants of global standing. Tokyo was, by the late 1980s, home to more restaurants per capita than any other major city in the world, serving food of unusually consistent quality across an unusually wide range of price points — a direct reflection of the economy's generalized affluence.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "Leisure and Resort Culture",
-      body: "The bubble era invested heavily in domestic leisure infrastructure: ski resorts in Nagano and Hokkaido, hot spring resort towns across the country, and theme parks — including Tokyo Disneyland (opened 1983) which expanded aggressively through the decade. Domestic travel spread urban spending across Japan's regional economies. Companies provided subsidized resort access through corporate retreat facilities. The pattern of leisure spending — intense, organized, often group-based — reflected the bubble's general tendency to transform social obligation into consumption opportunity. Resort culture was not simply recreation: it was networked professional maintenance conducted in scenic settings, with corporate hierarchies intact and expense accounts operating even at elevation.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "The Bubble Wedding",
-      body: "Japanese weddings underwent significant inflation during the bubble era — in scale, expense, and formal elaboration. Hotel weddings became the dominant format, driven by commercial venue operators who developed comprehensive packages: ceremony, reception, photography, catering, entertainment, and honeymoon arrangements bundled into events costing several million yen. Wedding ceremonies became performance events with professional styling, elaborate floral arrangements, and participatory entertainment. The cost exceeded what young couples could typically afford independently; parental support and company gifts structured the financing. The wedding industry was among the clearest examples of the bubble's tendency to monetize social ritual and convert cultural obligation into commercial transaction.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "Gift Culture and Consumption Obligation",
-      body: "Japanese gift-giving culture — formalized through the biannual ochugen (summer) and oseibo (year-end) gift seasons — was structurally embedded in social and professional life. Gifts were expected from subordinates to superiors, from suppliers to clients, from anyone with an ongoing relationship to maintain. The gift selection process was sophisticated: price, packaging, prestige of origin, and seasonal appropriateness all mattered. Department stores devoted significant floor space and staff resources to gift selection and wrapping. The social obligation embedded in gift culture created predictable, structured demand largely immune to the incertitude of discretionary spending — making it one of the more stable sectors of the bubble economy and one of the slower to contract afterward.",
-      chainActive: ["spending", "aesthetic"],
-    },
-    {
-      title: "Education and the Examination Economy",
-      body: "The bubble era coincided with peak intensity in Japan's examination culture. Admission to prestigious universities — primarily Tokyo University and Kyoto University — functioned as the key credential for access to elite corporate employment. The juku system — private cram schools attended after regular school hours — expanded substantially during the 1980s to serve families who could afford supplementary education. Children spent evenings and weekends in juku from elementary school onward. The expense of juku education was significant, a direct charge on household budgets that reflected both the value placed on educational credentials and the disposable income available to spend on securing them. The examination system reproduced economic advantage through educational structure.",
-      chainActive: ["spending", "wealth-effect"],
-    },
-    {
-      title: "The Media Environment",
-      body: "The bubble era's media landscape was defined by television, print, and radio — before the internet restructured all three. Television reached near-universal household penetration; NHK and commercial networks broadcast continuously. Television dramas depicted urban professional life in ways that both reflected and shaped aspirations: the apartments, restaurants, and wardrobes shown on screen were aspirational reference points structuring consumer desire. Weekly and monthly magazines — fashion, lifestyle, business, celebrity — circulated in the tens of millions. The media environment was intensely national: Japanese culture was primarily consumed through domestic productions, with foreign content carefully localized. This density of domestic cultural production created a self-reinforcing feedback loop between aspiration and consumption.",
-      chainActive: ["spending", "aesthetic", "music"],
-    },
-    {
-      title: "When the Bubble Ended: The Individual Experience",
-      body: "The bubble's end came to most individuals not as a single dramatic event but as an accumulation of small contractions. Expense accounts were quietly reduced. Bonus payments fell. Company social events were scaled back. Restaurants that had been full on Tuesday evenings had empty tables. Karaoke boxes were rented less. The second and third promotions that had seemed guaranteed were not offered. Colleagues were transferred to subsidiary companies — a Japanese corporate form of redundancy that avoided explicit dismissal. These changes arrived gradually, individually, spread across years. The transition from bubble prosperity to post-bubble anxiety was experienced as a slow deflation of daily life rather than a sharp rupture — which made it, in many ways, harder to process.",
-      chainActive: ["tightening", "collapse", "lost-decade"],
-    },
-    {
-      title: "Memory and the Lost World",
-      body: "The bubble era occupies an unusual position in Japanese cultural memory: simultaneously a period of genuine prosperity and collective embarrassment, of individual wellbeing and systemic irresponsibility. Japanese people who lived through it rarely describe it with uncomplicated nostalgia — the knowledge of what followed colors the recollection. The music, fashion, and consumer culture of the era have undergone significant revival among younger Japanese who experienced neither the prosperity nor the crash — for whom the bubble is aesthetics without consequence. The melancholy that attaches to City Pop, to images of neon-lit Tokyo in the late 1980s, to the sheer ambition of what was made and what was spent, is the melancholy of a world that knew it would not last, even when it couldn't admit it.",
-      chainActive: ["collapse", "lost-decade"],
-    },
-  ],
+  /* ══════════════════════════════════════
+     DAILY LIFE
+  ══════════════════════════════════════ */
+  "daily-life": {
+    "1985": [
+      {
+        title: "The Salaryman's World",
+        body: "The Japanese salaryman of 1985 has genuine reason for confidence. Lifetime employment at a major corporation provides stability, a predictable career trajectory, and housing loans at favorable rates through company affiliations. The system asks for loyalty and delivers security. Social identity is organized around institutional belonging — asked what they do, salarymen name their company before their function. The bubble era will intensify this identity while also distorting it: the benefits expand, and so do the costs.",
+        chainActive: ["wealth-effect", "spending"],
+      },
+      {
+        title: "Consumer Electronics and the New Household",
+        body: "The Japanese household in 1985 is being transformed by consumer electronics. The VCR, the microwave, the CD player, the personal computer — all are arriving as mass-market items. Sony, Panasonic, and Sharp produce goods that their employees can afford to buy at prices their wages support. The technology of daily life is advancing rapidly, and the improvement is visible and tangible. The connection between Japan's industrial success and its citizens' domestic comfort is direct and widely understood.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "The New Leisure",
+        body: "Domestic tourism, skiing, golf, and resort hotels are expanding their middle-class market in 1985. The two-day weekend, standardized in the 1960s, is being used with increasing intentionality. Travel magazines publish aspirational content about domestic destinations. The leisure infrastructure being built — ski resorts, coastal hotels, golf courses — is funded by corporate and individual investment anticipating the demand that prosperity is generating. The infrastructure and the prosperity grow together.",
+        chainActive: ["spending"],
+      },
+      {
+        title: "Women and the Workforce",
+        body: "Japan's Equal Employment Opportunity Law passes in 1985, beginning a slow institutional shift in the position of women in the formal workforce. Professional women in Tokyo navigate a system that formally recognizes their participation while informally resisting their advancement. The term 'office flower' describes the decorative function corporate culture assigns to women employees. The bubble will briefly expand their economic role as labor demand grows. The crash will not treat the expansion gently.",
+        chainActive: ["spending"],
+      },
+    ],
+    "1986": [
+      {
+        title: "The First Overseas Vacations",
+        body: "Foreign travel by Japanese tourists accelerates sharply in 1986. The strong yen makes international destinations more affordable than at any previous point in Japanese history. Hawaii, Hong Kong, Paris — destinations that were luxury exceptions become accessible to young urban professionals. The expansion of passport applications and the rapid growth of international flight routes from Japanese airports reflect this shift. A generation is traveling internationally for the first time, carrying with them consumption habits they will bring home.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "The Restaurant Boom",
+        body: "The restaurant economy of major Japanese cities expands rapidly in 1986. New cuisine categories — French, Italian, nouvelle cuisine hybrids — find middle-class urban audiences willing to spend on dining as social experience. The izakaya and ramen shop remain staples, but the meal as leisure activity and social performance expands significantly. Corporate expense accounts fund the upper end of this expansion. The distinction between eating and dining — functional versus performative consumption of food — becomes commercially meaningful.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "Dual Incomes and New Spending",
+        body: "Dual-income households are becoming more common in urban Japan in 1986. The additional income does not primarily flow to savings — it funds the consumer lifestyle the bubble era defines as normal: foreign travel, restaurant spending, fashion, home improvement. The two-income household also tends to outsource domestic functions previously performed at home — cleaning, cooking, childcare — creating demand in service sectors that the single-income model did not generate. The bubble and the dual-income household grow together.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "Urban Housing Pressure",
+        body: "For all its prosperity, housing in major urban areas remains expensive relative to incomes in 1986. Young couples buy apartments in outer Tokyo suburbs and commute ninety minutes each way. The commute is normalized as the price of urban employment — an understood cost of the system rather than a complaint. But the land prices enriching existing property owners are simultaneously pricing the next generation out of central neighborhoods. The bubble's benefits are unevenly distributed geographically in ways that will matter when prices fall.",
+        chainActive: ["real-estate", "spending"],
+      },
+    ],
+    "1987": [
+      {
+        title: "Golf as Corporate Ritual",
+        body: "Golf in 1987 is less a sport than a business infrastructure. Corporate membership at private clubs is an asset on the company balance sheet. Client entertainment on the course is a budget line item. Clubs are oversubscribed; membership certificates trade at significant premiums over their nominal value. The game is played — badly, on average, by time-pressed salarymen who cannot practice adequately — but the economics of playing matter more than the quality of play. Golf is a medium of relationship, not recreation.",
+        chainActive: ["spending", "wealth-effect", "asset-surge"],
+      },
+      {
+        title: "The Midnight Taxi",
+        body: "The midnight taxi is one of bubble-era Tokyo's defining images: a salaryman at Shinjuku station at one in the morning, business concluded, hailing a cab for the forty-minute ride home without checking the meter. The fare is not trivial — it may exceed a week of packed lunches — but the expense account or the accumulated overtime justifies it. Taxi revenues in Tokyo in 1987 are significant and measurable. The midnight taxi is not just a cultural symbol; it is an economic phenomenon with an industry built around it.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "The Department Store as Social Calendar",
+        body: "The Japanese department store in 1987 is at the height of its cultural influence. Seasonal commercial events — White Day, Mother's Day, the summer gift season (ochugen), the year-end gift season (oseibo) — structure the consumer calendar. The department store is not just retail; it houses art exhibitions, food halls, travel agencies, wedding services, and rooftop beer gardens. Its role in defining normal middle-class consumption is comprehensive. The annual sales events are social rituals as much as commercial opportunities.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "The Baby Boom Generation Spends",
+        body: "Japan's baby boom cohort — born between 1947 and 1949 — is in its late thirties in 1987, at peak earning power. This generation rebuilt postwar Japan and is now spending on the prosperity that rebuilding created. Their consumption drives demand for fashion, interior design, leisure goods, and premium food. The demographic weight of the cohort amplifies every consumption trend — what they want the market provides, because there are so many of them wanting it simultaneously.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+    ],
+    "1988": [
+      {
+        title: "The Good Life and What It Cost",
+        body: "The standard of living available to a middle-class Tokyo family in 1988 is exceptional by any historical measure. Foreign vacations once a year, a car, an apartment with modern appliances, restaurant meals regularly, children in cram schools preparing for good universities. The cost is real — the hours, the commute, the debt, the performance — but the lifestyle itself is not illusory. People are better housed, better fed, and better entertained than their parents. The bubble's prosperity is real; only its sustainability is not.",
+        chainActive: ["wealth-effect", "spending"],
+      },
+      {
+        title: "Juku and the Education Economy",
+        body: "Private cram schools — juku — are a major household expenditure in 1988. Competition for university placement is intense, and families spend seriously on supplementary education. The cost is manageable for two-income bubble-era households and is treated as non-negotiable — an investment in the child's future rather than a discretionary purchase. The education spending habit will outlast the bubble's prosperity, continuing as an obligation even when other consumption contracts. The juku is one of the bubble's most durable economic creations.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "The Karaoke Box Economy",
+        body: "Karaoke has evolved from a home entertainment system to a specialized social venue. Karaoke boxes — private rooms in purpose-built establishments — allow groups to sing without public performance anxiety. The industry is expanding rapidly, with new facilities opening across major cities. Corporate entertainment budgets flow through it; colleague gatherings depend on it; the karaoke box is among the most characteristic social institutions the bubble created. Its economics depend on the discretionary spending that the bubble provides.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "Debt and the New Normal",
+        body: "Japanese households in 1988 carry more debt than their parents would have considered prudent: mortgages at high loan-to-value ratios against apartments bought near peak prices, consumer credit extended by banks expanding their retail books. The debt feels manageable because asset values support it and employment is secure. Both conditions will change. The 1988 household debt load is not reckless by the standards of the moment — it is normal, recommended by banks and assumed by peers. Its recklessness only becomes visible in retrospect.",
+        chainActive: ["cheap-money", "spending", "real-estate"],
+      },
+    ],
+    "1989": [
+      {
+        title: "The Last Good New Year",
+        body: "Japanese New Year is the most important social event of the calendar. New Year's Eve 1989 is the last before the Nikkei collapse becomes common knowledge. Family reunions, temple visits, the traditional foods of the season — all proceed with the confidence of a society at its peak. Nobody in the household celebrating on December 31, 1989 knows that the Nikkei closed at its all-time high two days ago, or that it will not close higher again for thirty-four years. The ordinary celebration of ordinary life continues, unaware of what begins in two days.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "Women at the Bubble Peak",
+        body: "The professional Japanese woman in 1989 navigates a workplace that expanded opportunities during the bubble's growth while maintaining structural limits on advancement. The labor shortage of the late bubble years opened entry-level and some middle management positions that would not have existed otherwise. The expansion is real but fragile — dependent on the economic conditions that created it rather than on structural change. The crash will not be kind to the roles the bubble temporarily created.",
+        chainActive: ["spending", "wealth-effect"],
+      },
+      {
+        title: "Brand Logic and the Subway",
+        body: "The handbag carried on the Tokyo subway in 1989 communicates social position with considerable precision to anyone who can read the signals. Vuitton, Hermès, and Chanel are the established markers of a certain kind of professional achievement. The brands have calibrated their Japanese market strategies to exploit the social function of their products: limited supply, visible provenance, consistent quality. The consumption is not irrational within its social logic. It is the rational behavior of people operating in a status system where these signals have agreed meaning.",
+        chainActive: ["spending", "wealth-effect", "aesthetic"],
+      },
+      {
+        title: "The Year of Maximum Confidence",
+        body: "1989 is the year the bubble economy is most fully itself — most internally consistent, most broadly shared, most certain of its own continuation. The Nikkei will peak on December 29 and the land market will peak months later, but both peaks are invisible from within the year that precedes them. Consumer confidence surveys, retail data, and foreign travel figures all set records. The year that is the end is experienced as the middle.",
+        chainActive: ["wealth-effect", "spending", "asset-surge"],
+      },
+    ],
+    "1990": [
+      {
+        title: "The First Anxiety",
+        body: "Daily life in 1990 begins registering economic anxiety that was absent in 1988. The Nikkei decline appears in the business pages, then in general conversation, then in the behavior of people with stock market exposure. Households that borrowed to buy equities are recalculating. The decline in notional wealth does not immediately affect spending — confidence is sticky — but the direction is established. Japan is entering a period in which the news reliably contradicts the optimism that structured the preceding five years.",
+        chainActive: ["tightening", "collapse"],
+      },
+      {
+        title: "Karoshi and the Work Culture Conversation",
+        body: "Japan's culture of extreme working hours produces, in the late 1980s and early 1990s, a public conversation about karoshi — death from overwork. Cases of apparent work-related cardiac events in salarymen in their forties are reported and discussed. The conversation acknowledges a cost of the economic miracle that prosperity made easier to ignore during the bubble. The hours did not increase during the bubble — they were always there — but the rewards that justified them are now contracting while the hours remain.",
+        chainActive: ["spending", "tightening"],
+      },
+      {
+        title: "Housing Debt Without Appreciation",
+        body: "Japanese households that bought property near the market peak begin to notice in 1990 that the appreciation they assumed is not arriving. Mortgages taken at high valuations against properties that are no longer appreciating create an uncomfortable arithmetic: the loan balance is fixed, the asset value is declining, and the monthly payment is unchanged. The psychological relationship between the Japanese family and its home is changing. The apartment that was an investment is becoming, slowly, a trap.",
+        chainActive: ["real-estate", "collapse", "tightening"],
+      },
+      {
+        title: "Consumer Spending Shifts",
+        body: "Retail data for 1990 shows a modest but unmistakable change in consumer behavior. Luxury goods sales hold — brand consumption is socially sticky and the last to contract — but discretionary categories like dining out, domestic travel, and entertainment are declining. The consumer is adjusting before the recession is officially acknowledged or broadly discussed. Consumer behavior often leads official statistics; households feel the change in their own finances before the aggregate data captures it.",
+        chainActive: ["tightening", "collapse", "spending"],
+      },
+    ],
+    "1991": [
+      {
+        title: "Restructuring and the Lifetime Employment Bargain",
+        body: "Japanese corporations in 1991 are quietly renegotiating the terms of the lifetime employment system. No company wants to be first to announce mass redundancies — the social and reputational costs are prohibitive — but the scale of the problem makes adjustment unavoidable. Hiring freezes replace aggressive recruitment. Voluntary early retirement programs are introduced. Middle-aged employees who invested decades in a corporation expecting reciprocal security are discovering that the expectation was conditional on economic conditions that no longer exist.",
+        chainActive: ["collapse", "lost-decade"],
+      },
+      {
+        title: "The Empty Office District",
+        body: "Commercial real estate taken at bubble-era rents is being renegotiated or abandoned in 1991. Satellite offices and branch operations opened during the expansion years are being consolidated. The direct impact on the neighborhoods that served office workers — the lunch restaurants, dry cleaners, and convenience stores — is immediate and severe. The commercial geography of Tokyo's business districts reflects the economic contraction in empty storefronts and reduced foot traffic before any official recession statistics confirm what residents can already see.",
+        chainActive: ["collapse", "real-estate", "lost-decade"],
+      },
+      {
+        title: "A Generation's Expectations Revised",
+        body: "Young Japanese adults entering the workforce in 1991 face conditions that their bubble-era predecessors did not. Starting salaries are flat or declining. Corporate hiring is dramatically reduced. The assumption that education, loyalty, and consistent effort would be rewarded with lifetime employment and steadily rising income is no longer reliable. The social contract of postwar Japan is being rewritten in real time, not by legislation or explicit agreement, but by the daily decisions of corporations adjusting to a post-bubble reality.",
+        chainActive: ["collapse", "lost-decade"],
+      },
+      {
+        title: "What Prosperity Left Behind",
+        body: "The bubble era's daily life, viewed from 1991, left behind both debt and expectation. The debt — mortgages, consumer loans, corporate obligations — is quantifiable and must be serviced regardless of current conditions. The expectation — that prosperity was the new normal, that the next decade would exceed the last — is harder to adjust. The psychological cost of the lost decade will prove, for many Japanese, as significant as the financial one. Japan spent the 1990s mourning a standard of living it had held for only a decade.",
+        chainActive: ["collapse", "lost-decade"],
+      },
+    ],
+  },
 
 };
