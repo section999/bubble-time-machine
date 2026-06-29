@@ -207,6 +207,11 @@ function renderSection() {
       `${ep.icon}  ${ep.title}  ·  ${state.year}`;
   }
 
+  // Year context bar
+  const yearData = CONTENT[state.year];
+  const yearContextEl = document.getElementById("yearContext");
+  if (yearContextEl && yearData) yearContextEl.textContent = yearData.heroMood;
+
   updateChain(s.chainActive || []);
   trackSection();
 }

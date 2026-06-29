@@ -261,6 +261,15 @@ body {
 
 /* ════════════════════ ENTRY POINTS ════════════════════ */
 
+.era-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
 .entry-label {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -274,6 +283,11 @@ body {
   grid-template-columns: repeat(5, 1fr);
   gap: 0.75rem;
   margin-top: 2.5rem;
+}
+
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Entry card */
@@ -291,7 +305,14 @@ body {
   gap: 0.5rem;
   position: relative;
   outline: none;
+  animation: card-rise 0.4s ease backwards;
 }
+
+.entry-card:nth-child(1) { animation-delay: 0.05s; }
+.entry-card:nth-child(2) { animation-delay: 0.12s; }
+.entry-card:nth-child(3) { animation-delay: 0.19s; }
+.entry-card:nth-child(4) { animation-delay: 0.26s; }
+.entry-card:nth-child(5) { animation-delay: 0.33s; }
 
 .entry-card:hover {
   border-color: var(--accent-purple);
@@ -418,6 +439,18 @@ body {
   border-radius: 1px;
   width: 0%;
   transition: width 0.35s ease;
+}
+
+/* Year context bar */
+.year-context {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-yellow);
+  opacity: 0.8;
+  border-left: 2px solid var(--accent-yellow);
+  padding-left: 0.65rem;
+  line-height: 1.55;
+  margin-top: -0.5rem;
 }
 
 /* Breadcrumb */
@@ -907,9 +940,9 @@ body {
     padding: 0 1rem;
   }
 
-  /* Scroll container moves to wrap so timeline-nodes has no overflow,
-     preventing the forced overflow-y:hidden that clips the active dot */
-  .timeline-wrap {
+  /* Scroll only the year nodes — keeps entry-grid unaffected,
+     and timeline-nodes has no overflow so active dot box-shadow isn't clipped */
+  .timeline-scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 0.5rem;

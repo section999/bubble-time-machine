@@ -8,6 +8,9 @@
   <meta property="og:title" content="Bubble Time Machine" />
   <meta property="og:description" content="An interactive guide to Japan's bubble economy era — City Pop, Akira, luxury culture, and the crash." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +36,7 @@
   <div class="dashboard-overlay" id="dashboardOverlay"></div>
   <aside class="dashboard-panel" id="dashboardPanel" aria-label="Progress dashboard">
     <div class="dashboard-header">
-      <span class="dashboard-title">// save progress</span>
+      <span class="dashboard-title">Save Progress</span>
       <button class="dashboard-close" id="dashboardClose" aria-label="Close dashboard">&#10005;</button>
     </div>
     <div class="dashboard-body">
@@ -86,10 +89,13 @@
   <!-- ════════════════════ TIMELINE + ENTRY POINTS ════════════════════ -->
   <section class="timeline-section" aria-labelledby="entryLabel">
     <div class="timeline-wrap">
-      <p class="entry-label" id="entryLabel">Where do you want to start?</p>
-      <div class="timeline-nodes" id="yearSelector" role="group" aria-label="Select a year">
-        <!-- Built by app.js -->
+      <p class="era-label">Set the year</p>
+      <div class="timeline-scroll">
+        <div class="timeline-nodes" id="yearSelector" role="group" aria-label="Select a year">
+          <!-- Built by app.js -->
+        </div>
       </div>
+      <p class="entry-label" id="entryLabel">Pick a topic to begin</p>
       <div class="entry-grid" id="entryGrid" role="list">
         <!-- Built by app.js -->
       </div>
@@ -108,6 +114,7 @@
       </div>
 
       <div class="content-breadcrumb" id="contentBreadcrumb"></div>
+      <div class="year-context" id="yearContext"></div>
 
       <div class="section-nav">
         <button class="section-arrow" id="prevSection" aria-label="Previous section">&#8592;</button>
