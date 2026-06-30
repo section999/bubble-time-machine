@@ -81,7 +81,7 @@ body {
   font-size: 1.15rem;
   width: 2rem;
   height: 2rem;
-  border-radius: var(--radius);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,11 +92,13 @@ body {
 
 .nav-icon-btn:hover {
   color: var(--text-primary);
-  background: var(--bg-tertiary);
+  background: transparent;
+  filter: drop-shadow(0 0 5px var(--text-primary));
 }
 
 .nav-icon-btn--heart:hover {
   color: #ff6b6b;
+  filter: drop-shadow(0 0 5px #ff6b6b);
 }
 
 .nav-brand {
@@ -253,7 +255,7 @@ body {
 
 .era-label {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 1rem;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
   text-align: center;
@@ -262,9 +264,10 @@ body {
 
 .entry-label {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
@@ -272,7 +275,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0.75rem;
-  margin-top: 2.5rem;
+  margin-top: 0;
 }
 
 @keyframes card-rise {
@@ -614,7 +617,7 @@ body {
 
 .dashboard-title {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--accent-green);
   letter-spacing: 0.02em;
 }
@@ -655,7 +658,7 @@ body {
 
 .dashboard-section-label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -674,7 +677,7 @@ body {
   border-radius: var(--radius);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   padding: 0.45rem 0.65rem;
   outline: none;
   transition: border-color var(--transition);
@@ -690,7 +693,7 @@ body {
   border-radius: var(--radius);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   padding: 0.45rem 0.65rem;
   cursor: pointer;
   white-space: nowrap;
@@ -715,13 +718,13 @@ body {
 
 .progress-item-name {
   font-family: var(--font-mono);
-  font-size: 0.73rem;
+  font-size: 0.85rem;
   color: var(--text-body);
 }
 
 .progress-item-count {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
@@ -745,21 +748,23 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .action-row {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  width: 100%;
-  padding: 0.65rem 0.9rem;
+  width: auto;
+  padding: 0.4rem 0;
   background: none;
   border: none;
   color: var(--text-body);
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.85rem;
+  justify-content: center;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
   transition: background var(--transition), color var(--transition);
 }
 
@@ -790,7 +795,7 @@ body {
   border: none;
   color: var(--text-muted);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.85rem;
   cursor: pointer;
   padding: 0.35rem 0;
   text-align: left;
@@ -804,7 +809,7 @@ body {
 
 .dashboard-note {
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.65;
   border-top: 1px solid var(--border);
@@ -897,6 +902,7 @@ body {
   .timeline-wrap {
     padding: 1.5rem 0;
   }
+
 
   .entry-grid {
     grid-template-columns: repeat(3, 1fr);
