@@ -13,6 +13,9 @@ const state = {
 
 const YEARS = ["1985", "1986", "1987", "1988", "1989", "1990", "1991"];
 
+const _animateTimers = {};
+let   _renderTimer   = null;
+
 /* ════════════════════ BOOT ════════════════════ */
 
 /* ════════════════════ THEME ════════════════════ */
@@ -45,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   buildYearSelector();
   buildEntryGrid();
-  renderHero();
   setYear("1988");
 
   // Section navigation
@@ -61,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", e => {
     if (document.getElementById("contentArea").hidden) return;
     if (document.activeElement.tagName === "INPUT") return;
+    if (document.getElementById("dashboardPanel").classList.contains("is-open")) return;
     if (e.key === "ArrowLeft") {
       if (state.sectionIndex > 0) { state.sectionIndex--; renderSection(); }
     } else if (e.key === "ArrowRight") {
@@ -133,13 +136,16 @@ function renderHero() {
 function animateText(id, newText) {
   const el = document.getElementById(id);
   if (!el) return;
+  clearTimeout(_animateTimers[id]);
+  el.style.transition = "none";
   el.style.opacity = "0";
   el.style.transform = "translateY(6px)";
-  setTimeout(() => {
+  _animateTimers[id] = setTimeout(() => {
     el.textContent = newText;
     el.style.transition = "opacity 0.3s ease, transform 0.3s ease";
     el.style.opacity = "1";
     el.style.transform = "translateY(0)";
+    setTimeout(() => { el.style.transition = ""; }, 300);
   }, 120);
 }
 
@@ -211,7 +217,8 @@ function renderSection() {
   titleEl.style.opacity = "0";
   textEl.style.opacity  = "0";
 
-  setTimeout(() => {
+  clearTimeout(_renderTimer);
+  _renderTimer = setTimeout(() => {
     titleEl.textContent = s.title;
     textEl.textContent  = s.body;
     titleEl.style.opacity = "1";
@@ -333,8 +340,10 @@ function exportProgress() {
   const a    = document.createElement("a");
   a.href     = url;
   a.download = "btm-progress.json";
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(url);
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 100);
 }
 
 function handleImportFile(e) {

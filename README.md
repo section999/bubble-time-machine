@@ -8,7 +8,7 @@ An educational website exploring Japan's bubble economy era (1985–1991) throug
 
 Japan's bubble economy is one of the most culturally rich and economically instructive periods in modern history. This project makes that era accessible — not through dry statistics, but through the cultural phenomena it produced: City Pop, Akira, luxury department stores, the Nikkei at 38,915, and the midnight taxis nobody checked the meter on.
 
-Each of the five entry points contains **20 deep-dive sections** covering historical, cultural, and economic facts — 100 sections in total.
+Each of the five entry points contains **28 deep-dive sections** covering historical, cultural, and economic facts — 140 sections in total.
 
 ---
 
@@ -17,7 +17,7 @@ Each of the five entry points contains **20 deep-dive sections** covering histor
 | Entry Point | What it covers |
 |-------------|----------------|
 | 🎵 Music | City Pop origins, FM radio, Tatsuro Yamashita, Mariya Takeuchi, the YouTube revival |
-| 📺 Anime | The OVA revolution, Akira's ¥1.1B budget, Studio Ghibli's founding, cel animation |
+| 📺 Anime | The OVA revolution, Akira's production budget, Studio Ghibli's founding, cel animation |
 | 🏙️ Aesthetic | DC brands, department store culture, luxury obsession, Harajuku, postmodern architecture |
 | 💹 Economy | Plaza Accord, yen appreciation, land prices, Nikkei crash, the Lost Decade |
 | 🏠 Daily Life | Salaryman culture, expense accounts, midnight taxis, the housing crisis, memory |
