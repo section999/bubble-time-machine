@@ -25,11 +25,11 @@ const CONTENT = {
     heroSub:  "December 29, 1989. The Nikkei closes at 38,915. Across Tokyo, the karaoke bars are full and the future feels infinite. It is the last night of the bubble.",
   },
   "1990": {
-    heroMood: "The Nikkei falls by half in a single year. The party is over before anyone admits it.",
+    heroMood: "The Nikkei falls nearly 40% in a single year. The party is over before anyone admits it.",
     heroSub:  "Stock prices are collapsing, but land hasn't moved yet. Banks are still lending against old valuations. The culture hasn't gotten the memo. City Pop is still on the radio.",
   },
   "1991": {
-    heroMood: "Land prices collapse. The Lost Decade begins. Japan will spend thirty years with this wound.",
+    heroMood: "Land prices collapse. The Lost Decade begins. Japan will spend decades rebuilding what the bubble consumed.",
     heroSub:  "The real estate market that had seemed untouchable begins its long fall. Corporations carry loans against assets worth a fraction of their collateral. Banks are quietly insolvent.",
   },
 };
@@ -58,7 +58,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "Tatsuro Yamashita at the Center",
-        body: "Yamashita is the producer-artist who defines City Pop's quality standard in 1985. His studio perfectionism — multilayered vocals, precisely engineered arrangements, music that rewards close listening on good equipment — sets the bar that other labels and artists aspire to. His commercial success demonstrates that sophistication and popularity are not in conflict. The example he provides shapes what the entire genre attempts.",
+        body: "Yamashita is the producer-artist who defines City Pop's quality standard in 1985. His Melodies album (1983) — whose centerpiece Christmas Eve is now an established FM fixture — demonstrated what sustained studio investment produces. In 1985, between studio cycles, he maintains his position through extensive live touring. His perfectionism — multilayered vocals, precisely engineered arrangements, music that rewards close listening on quality equipment — sets the bar that other labels and artists aspire to match. His success demonstrates that sophistication and popularity are not in conflict. The example he provides shapes what the entire genre attempts.",
         chainActive: ["music"],
       },
       {
@@ -80,7 +80,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "Taeko Ohnuki and Sophistication",
-        body: "Taeko Ohnuki represents City Pop's most intellectually ambitious strand in 1986. Her arrangements incorporate jazz harmony, French pop influence, and a willingness to subordinate commercial accessibility to artistic interest. The bubble era's A-and-R culture can afford to fund work like this. Ohnuki's albums sell respectably without dominating charts — a performance that would have been commercially unsustainable in a tighter industry.",
+        body: "Taeko Ohnuki represents City Pop's most intellectually ambitious strand in the mid-1980s. Her studio recordings from this period incorporate jazz harmony, French pop influence, and a willingness to subordinate commercial accessibility to artistic interest. The bubble era's A-and-R culture can afford to fund work like this — albums that sell respectably without dominating charts occupy a position in 1986 that would be commercially unsustainable in a tighter industry. Ohnuki's example defines what City Pop's most serious practitioners are capable of when the economy removes financial urgency from creative decisions.",
         chainActive: ["music"],
       },
       {
@@ -124,7 +124,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "Mariya Takeuchi in the Studio",
-        body: "Mariya Takeuchi is recording in the mid-to-late 1980s with the care and resources that only the bubble years could sustain. Her collaboration with husband Tatsuro Yamashita produces music of unusual craft. Plastic Love, recorded in 1984 and already circulating on mix-tapes, will not find its global audience until 2017 — but in 1988 it exists as evidence of what the era's studio culture made possible. The YouTube discovery is thirty years away.",
+        body: "Mariya Takeuchi is recording in the mid-to-late 1980s with the care and resources that only the bubble years could sustain. Her collaboration with husband Tatsuro Yamashita produces music of unusual craft. Plastic Love, recorded in 1984 as a deep cut on her album Variety, will not find its global audience until 2017 — but in 1988 it exists as evidence of what the era's studio culture made possible. The YouTube discovery is thirty years away.",
         chainActive: ["music", "wealth-effect"],
       },
       {
@@ -151,7 +151,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "International Ambitions",
-        body: "Some City Pop artists attempt international crossover in 1989, using the bubble's financial confidence to fund overseas recording sessions and promotional activities. The attempts find limited audiences in Western markets — the distribution infrastructure and cultural context are absent — but they represent an ambition that the bubble made financially possible. Japan's economic confidence has become global; the music industry's reach has not yet followed.",
+        body: "Labels affiliated with Sony Music's global network are using 1989's financial confidence to fund overseas recording sessions for select City Pop artists. Studios in Los Angeles — whose session musicians directly influenced City Pop's sound through the American records Japanese producers had studied for a decade — are now bookable on Japanese budgets. The ambition is to record with the original sources, not imitations. The distribution infrastructure for reaching Western retail does not match the production ambition, and the cultural context that would make these records legible to foreign listeners remains largely absent. Japan's music industry has built global creative connections. It has not yet built global commercial reach.",
         chainActive: ["music", "spending"],
       },
       {
@@ -178,7 +178,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "Southern All Stars and the Art of Surviving",
-        body: "Southern All Stars represent a model of adaptation — a rock-adjacent act with City Pop influences that has built a sufficiently broad audience to survive the economic contraction. Their durability illustrates what distinguishes artists who outlast the bubble from those who do not: an audience that follows them for reasons beyond the lifestyle aspirations the bubble temporarily made universal. When those aspirations deflate, artists without deeper audience loyalty have nothing left.",
+        body: "Southern All Stars represent a model of adaptation — a rock-adjacent act with City Pop influences that has accumulated, across more than a decade of activity, an audience attached to the band itself rather than to the lifestyle aspirations their music incidentally described. In a contracting market, their continued commercial viability illustrates what distinguishes artists who outlast the bubble: an audience that follows them for reasons independent of the prosperity that once shaped the genre's context. When those aspirations deflate, acts whose appeal was inseparable from the bubble's mood have nothing left to convert into continued viability. Southern All Stars had something else: they were genuinely liked, independently of the economy.",
         chainActive: ["music", "collapse"],
       },
     ],
@@ -228,7 +228,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "The Manga-to-Anime Pipeline",
-        body: "The relationship between manga and anime is formalizing in 1985 into a reliable commercial structure. Dragon Ball is entering animation production ahead of its February 1986 broadcast launch; Saint Seiya is in development for its October 1986 debut. The manga serialization system, which tests story and character over years of weekly publication, produces source material with proven audience attachment before a single animation cel is drawn.",
+        body: "The relationship between manga and anime is formalizing in 1985 into a reliable commercial structure. Adachi Mitsuru's Touch — beginning its Fuji TV broadcast in March 1985 — demonstrates the model in operation: a Weekly Shōnen Sunday adaptation with years of proven readership, delivering an established audience directly to television. Hokuto no Ken, adapting the Weekly Shōnen Jump series, has been building its broadcast audience since October 1984. The manga serialization system tests story and character over years of weekly publication before a single animation cel is drawn, producing source material whose audience attachment is already verified. The pipeline that will define anime's commercial logic for decades is assembling itself in 1985.",
         chainActive: ["anime", "spending"],
       },
     ],
@@ -272,7 +272,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "Akira: The Production Begins",
-        body: "Katsuhiro Otomo's film Akira enters full production in 1987 with a budget of approximately 1.1 billion yen — the largest ever committed to a Japanese animated feature. The scale requires technical innovations: 24-frames-per-second fully detailed animation, dialogue recorded before animation began rather than after, a level of background detail unprecedented in theatrical anime. The project is only possible because the bubble economy can absorb the risk of a production this ambitious.",
+        body: "Katsuhiro Otomo's film Akira enters full production in 1987 with a production budget of approximately 700 million yen — the largest ever committed to a Japanese animated feature, with total costs including marketing estimated higher still. The scale requires technical innovations: 24-frames-per-second fully detailed animation, dialogue recorded before animation began rather than after, a level of background detail unprecedented in theatrical anime. The project is only possible because the bubble economy can absorb the risk of a production this ambitious.",
         chainActive: ["anime", "cheap-money", "asset-surge"],
       },
     ],
@@ -316,7 +316,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "The Franchise Logic",
-        body: "The Gundam franchise, through its various OVA continuations and theatrical compilations, establishes in 1989 a commercial model that will prove more durable than single-title production: consistent universe, recurring characters, loyal collector base, model kit sales that continue regardless of individual title performance. The franchise provides a financial floor that does not depend on each new production's success. This logic will sustain the anime industry through the harder conditions coming.",
+        body: "The Gundam franchise establishes in 1989 a commercial model that will prove more durable than single-title production. Mobile Suit Gundam 0080: War in the Pocket — the first Gundam OVA not directed by original creator Yoshiyuki Tomino, beginning its six-episode run in March 1989 — demonstrates that the universe is larger than any single creative vision. Consistent universe, recurring characters, loyal collector base, model kit sales that continue regardless of individual title performance: the franchise provides a financial floor that does not depend on each new production's success. A dedicated collector audience will sustain this market through the contracting conditions that eliminate casual consumer spending. This logic will prove essential as the industry enters harder years.",
         chainActive: ["anime", "spending"],
       },
     ],
@@ -422,7 +422,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "The Automobile as Status Object",
-        body: "The automobile reaches peak status function in 1987. The Toyota Soarer and Nissan Fairlady Z are established as the domestic luxury benchmark; the Honda NSX is in development, its production version still two years away. Corporate purchasing of European imports — BMW, Mercedes, Porsche — is significant and visible. Car design and advertising in 1987 is inseparable from the aspirational aesthetic of City Pop music videos, the coastal drive as emblem of the good life made available by prosperity.",
+        body: "The automobile reaches peak status function in 1987. The Toyota Soarer and Nissan Fairlady Z are established as the domestic luxury benchmark; the Honda NSX is in development, its production version still three years away. Corporate purchasing of European imports — BMW, Mercedes, Porsche — is significant and visible. Car design and advertising in 1987 is inseparable from the aspirational aesthetic of City Pop music videos, the coastal drive as emblem of the good life made available by prosperity.",
         chainActive: ["aesthetic", "spending", "wealth-effect"],
       },
       {
@@ -538,7 +538,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "The Yen Appreciates",
-        body: "The yen strengthens dramatically after the Plaza Accord. Against the dollar, it moves from approximately 240 yen per dollar before September 1985 to around 150 yen by late 1986 — a 38% appreciation in roughly a year. For Japanese exporters — Toyota, Sony, Hitachi — this is devastating: products priced for a 240-yen dollar become uncompetitive at 150. The export economy that had driven Japan's growth for a generation is suddenly under severe pressure.",
+        body: "The yen strengthens dramatically after the Plaza Accord. Against the dollar, it moves from approximately 240 yen per dollar before September 1985 to around 160 yen by late 1986 — a 33% appreciation in roughly a year, with the yen continuing to strengthen toward 150 by early 1987. For Japanese exporters — Toyota, Sony, Hitachi — this is devastating: products priced for a 240-yen dollar become uncompetitive as the rate moves rapidly against them. The export economy that had driven Japan's growth for a generation is suddenly under severe pressure.",
         chainActive: ["plaza-accord", "yen"],
       },
       {
@@ -643,7 +643,7 @@ const ENTRY_SECTIONS = {
     "1990": [
       {
         title: "The Nikkei Falls by Half",
-        body: "The Nikkei falls approximately 48% during 1990, from its December 1989 peak of 38,915 to roughly 20,222 by year end. This is the most severe sustained decline in a major market since the 1929–1932 contraction in the United States. The scale surprises even analysts who had predicted a correction. Corrections are measured in percentages of perhaps 10–20%. A 48% decline in a single year is not a correction; it is a repudiation. The distinction between what was expected and what actually happened will shape Japanese economic policy for a decade.",
+        body: "The Nikkei falls approximately 39% during 1990, from its December 1989 peak of 38,915 to roughly 23,848 by year end. At its worst point in October, the index touched 20,221 — a nearly 48% decline from the peak. This is the most severe sustained decline in a major market since the 1929–1932 contraction in the United States. The scale surprises even analysts who had predicted a correction. Corrections are measured in percentages of perhaps 10–20%. A 39% annual decline, with deeper troughs within it, is not a correction; it is a repudiation. The distinction between what was expected and what actually happened will shape Japanese economic policy for a decade.",
         chainActive: ["tightening", "collapse"],
       },
       {
@@ -769,7 +769,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "The Karaoke Box Economy",
-        body: "The karaoke box — a private room in a purpose-built venue, allowing groups to sing without public performance anxiety — spread from Osaka in the mid-1980s and is now a standard feature of major Japanese cities. The industry is expanding rapidly, with new facilities opening across urban areas. Corporate entertainment budgets flow through it; colleague gatherings depend on it. The karaoke box is among the most characteristic social institutions the bubble created, its economics entirely dependent on the discretionary spending the bubble provides.",
+        body: "The karaoke box — a private room in a purpose-built venue, allowing groups to sing without public performance anxiety — first established in Okayama in 1984, spread rapidly across western Japan, and is now a standard feature of major Japanese cities. The industry is expanding rapidly, with new facilities opening across urban areas. Corporate entertainment budgets flow through it; colleague gatherings depend on it. The karaoke box is among the most characteristic social institutions the bubble created, its economics entirely dependent on the discretionary spending the bubble provides.",
         chainActive: ["spending", "wealth-effect"],
       },
       {
@@ -840,7 +840,7 @@ const ENTRY_SECTIONS = {
       },
       {
         title: "What Prosperity Left Behind",
-        body: "The bubble era's daily life, viewed from 1991, left behind both debt and expectation. The debt — mortgages, consumer loans, corporate obligations — is quantifiable and must be serviced regardless of current conditions. The expectation — that prosperity was the new normal, that the next decade would exceed the last — is harder to adjust. The psychological cost of the lost decade will prove, for many Japanese, as significant as the financial one. Japan spent the 1990s mourning a standard of living it had held for only a decade.",
+        body: "The bubble era's daily life, viewed from 1991, left behind both debt and a revised sense of what can be expected. The debt — mortgages, consumer loans, corporate obligations — is quantifiable and must be serviced regardless of current conditions. The expectation — that steady employment, rising assets, and predictable advancement constituted a reliable social contract — is harder to adjust than any balance sheet. In 1985, the salaryman who turned from the Plaza Accord news to the sports section could not have imagined the newspaper he reads now. The gap between what was expected and what arrived is measured not only in yen but in the quiet reorganization of what kind of life it is realistic to plan for. The bubble gave a generation its ambitions. The decade that followed gave it different ones.",
         chainActive: ["collapse", "lost-decade"],
       },
     ],
