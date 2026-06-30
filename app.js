@@ -15,7 +15,34 @@ const YEARS = ["1985", "1986", "1987", "1988", "1989", "1990", "1991"];
 
 /* ════════════════════ BOOT ════════════════════ */
 
+/* ════════════════════ THEME ════════════════════ */
+
+function initTheme() {
+  const btn = document.getElementById("themeToggleBtn");
+  const saved = localStorage.getItem("BTM_THEME");
+  if (saved === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    btn.innerHTML = "&#9790;";
+    btn.setAttribute("aria-label", "Switch to dark mode");
+  }
+  btn.addEventListener("click", () => {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+    if (isLight) {
+      document.documentElement.removeAttribute("data-theme");
+      btn.innerHTML = "&#9728;";
+      btn.setAttribute("aria-label", "Switch to light mode");
+      localStorage.setItem("BTM_THEME", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      btn.innerHTML = "&#9790;";
+      btn.setAttribute("aria-label", "Switch to dark mode");
+      localStorage.setItem("BTM_THEME", "light");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
   buildYearSelector();
   buildEntryGrid();
   renderHero();

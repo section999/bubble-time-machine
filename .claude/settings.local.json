@@ -18,7 +18,8 @@
       "Bash(where msedge:*)",
       "Bash(node -e \"require\\(''child_process''\\).execSync\\(''where chrome'',{stdio:''pipe''}\\)\")",
       "Read(//c/Program Files/Google/Chrome/Application/**)",
-      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --screenshot=\"C:/Users/masay/bubble-time-machine/og-image.png\" --window-size=1200,630 --no-sandbox --hide-scrollbars --disable-gpu \"file:///C:/Users/masay/bubble-time-machine/og-render.html\")"
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --screenshot=\"C:/Users/masay/bubble-time-machine/og-image.png\" --window-size=1200,630 --no-sandbox --hide-scrollbars --disable-gpu \"file:///C:/Users/masay/bubble-time-machine/og-render.html\")",
+      "WebFetch(domain:design-style-guide.freecodecamp.org)"
     ]
   }
 }

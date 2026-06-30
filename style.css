@@ -812,6 +812,33 @@ body {
   margin-top: auto;
 }
 
+/* ════════════════════ LIGHT MODE ════════════════════ */
+
+[data-theme="light"] {
+  --bg-primary:    #f5f6f7;
+  --bg-secondary:  #ffffff;
+  --bg-tertiary:   #dfdfe2;
+  --border:        #d0d0d5;
+  --text-primary:  #0a0a23;
+  --text-muted:    #3b3b4f;
+  --accent-purple: #5a01a7;
+  --accent-yellow: #4d3800;
+  --accent-green:  #00471b;
+  --text-body:     #1b1b32;
+}
+
+[data-theme="light"] .timeline-node.active .timeline-dot {
+  box-shadow: 0 0 0 5px rgba(77, 56, 0, 0.15);
+}
+
+[data-theme="light"] .entry-card.active {
+  background-color: rgba(77, 56, 0, 0.07);
+}
+
+[data-theme="light"] .dashboard-overlay {
+  background: rgba(10, 10, 35, 0.4);
+}
+
 /* ════════════════════ UTILITY ════════════════════ */
 
 .visually-hidden {
