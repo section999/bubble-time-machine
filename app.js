@@ -220,7 +220,7 @@ function renderSection() {
   clearTimeout(_renderTimer);
   _renderTimer = setTimeout(() => {
     titleEl.textContent = s.title;
-    textEl.textContent  = s.body;
+    textEl.innerHTML = s.body.split('\n\n').map(p => `<p>${p}</p>`).join('');
     titleEl.style.opacity = "1";
     textEl.style.opacity  = "1";
   }, 140);
@@ -249,7 +249,6 @@ function renderSection() {
   const yearContextEl = document.getElementById("yearContext");
   if (yearContextEl && yearData) yearContextEl.textContent = yearData.heroMood;
 
-  updateChain(s.chainActive || []);
   trackSection();
 }
 
@@ -371,12 +370,4 @@ function resetProgress() {
   renderProgressList();
 }
 
-/* ════════════════════ CAUSAL CHAIN ════════════════════ */
-
-function updateChain(activeNodes) {
-  document.querySelectorAll(".chain-node").forEach(node => {
-    const isActive = activeNodes.includes(node.dataset.node);
-    node.classList.toggle("chain-node--active", isActive);
-  });
-}
 

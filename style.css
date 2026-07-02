@@ -349,7 +349,7 @@ body {
   margin: 0 auto;
   padding: 2.5rem 2rem;
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: start;
 }
@@ -459,113 +459,11 @@ body {
   line-height: 1.85;
   transition: opacity 0.15s ease;
 }
-
-
-/* ════════════════════ SIDEBAR ════════════════════ */
-
-.content-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  position: sticky;
-  top: calc(var(--nav-height) + 1.5rem);
+.section-text p {
+  margin: 0 0 1.2rem;
 }
-
-.sidebar-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.sidebar-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border);
-}
-
-/* ── Cause & effect chain ── */
-.chain {
-  display: flex;
-  flex-direction: column;
-}
-
-.chain-phase {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.chain-phase:first-child {
-  margin-top: 0;
-}
-
-.chain-node {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
-  padding: 0.3rem 0;
-  transition: opacity var(--transition);
-}
-
-.chain-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 2px solid var(--border);
-  background: transparent;
-  flex-shrink: 0;
-  margin-top: 0.35rem;
-  transition: border-color var(--transition), background var(--transition);
-}
-
-.chain-text {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-  transition: color var(--transition);
-}
-
-/* Indented cultural branch */
-.chain-node--indented {
-  padding-left: 1rem;
-}
-
-/* Active states */
-.chain-node--economic.chain-node--active .chain-dot {
-  border-color: var(--accent-yellow);
-  background: var(--accent-yellow);
-}
-
-.chain-node--economic.chain-node--active .chain-text {
-  color: var(--accent-yellow);
-}
-
-.chain-node--cultural.chain-node--active .chain-dot {
-  border-color: var(--accent-purple);
-  background: var(--accent-purple);
-}
-
-.chain-node--cultural.chain-node--active .chain-text {
-  color: var(--accent-purple);
-}
-
-/* Connector line between nodes */
-.chain-connector {
-  width: 1px;
-  height: 18px;
-  background: var(--border);
-  margin-left: 4px;
-  flex-shrink: 0;
+.section-text p:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -868,13 +766,6 @@ body {
     gap: 0;
   }
 
-  .content-right {
-    position: static;
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-    margin-top: 0.5rem;
-  }
-
   /* Wider dashboard on tablet */
   .dashboard-panel {
     width: 320px;
@@ -1000,11 +891,6 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.1rem;
-  }
-
-  /* Chain sidebar */
-  .chain-text {
-    font-size: 0.7rem;
   }
 
   /* Dashboard full-width on small phones */
