@@ -136,6 +136,11 @@ function renderHero() {
 function animateText(id, newText) {
   const el = document.getElementById(id);
   if (!el) return;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced) {
+    el.textContent = newText;
+    return;
+  }
   clearTimeout(_animateTimers[id]);
   el.style.transition = "none";
   el.style.opacity = "0";
@@ -181,6 +186,7 @@ function buildEntryGrid() {
 }
 
 function selectEntryPoint(id) {
+  const wasHidden = document.getElementById("contentArea").hidden;
   state.entryPoint = id;
   state.sectionIndex = 0;
 
@@ -189,16 +195,19 @@ function selectEntryPoint(id) {
   });
 
   renderSection();
-  showContentArea();
+  showContentArea(wasHidden);
 }
 
 /* ════════════════════ CONTENT AREA ════════════════════ */
 
-function showContentArea() {
+function showContentArea(shouldScroll = true) {
   const area  = document.getElementById("contentArea");
   area.hidden = false;
   area.removeAttribute("aria-hidden");
-  area.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (shouldScroll) {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    area.scrollIntoView({ behavior: reduced ? "instant" : "smooth", block: "start" });
+  }
 }
 
 function renderSection() {
@@ -210,24 +219,30 @@ function renderSection() {
   const s = sections[state.sectionIndex];
   if (!s) return;
 
-  const titleEl = document.getElementById("contentTitle");
-  const textEl  = document.getElementById("sectionText");
-
-  // Fade out
-  titleEl.style.opacity = "0";
-  textEl.style.opacity  = "0";
+  const titleEl   = document.getElementById("contentTitle");
+  const textEl    = document.getElementById("sectionText");
+  const counterEl = document.getElementById("sectionCounter");
+  const reduced   = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   clearTimeout(_renderTimer);
-  _renderTimer = setTimeout(() => {
+
+  if (reduced) {
     titleEl.textContent = s.title;
     textEl.innerHTML = s.body.split('\n\n').map(p => `<p>${p}</p>`).join('');
-    titleEl.style.opacity = "1";
-    textEl.style.opacity  = "1";
-  }, 140);
+    counterEl.textContent = `${state.sectionIndex + 1} / ${sections.length}`;
+  } else {
+    // Fade out
+    titleEl.style.opacity = "0";
+    textEl.style.opacity  = "0";
 
-  // Counter
-  document.getElementById("sectionCounter").textContent =
-    `${state.sectionIndex + 1} / ${sections.length}`;
+    _renderTimer = setTimeout(() => {
+      titleEl.textContent = s.title;
+      textEl.innerHTML = s.body.split('\n\n').map(p => `<p>${p}</p>`).join('');
+      titleEl.style.opacity = "1";
+      textEl.style.opacity  = "1";
+      counterEl.textContent = `${state.sectionIndex + 1} / ${sections.length}`;
+    }, 140);
+  }
 
   // Arrow states
   document.getElementById("prevSection").disabled = state.sectionIndex === 0;
@@ -280,15 +295,45 @@ function trackSection() {
 
 /* ════════════════════ DASHBOARD ════════════════════ */
 
+const FOCUSABLE = 'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])';
+
+let _dashboardOpener = null;
+
+function _dashboardKeyHandler(e) {
+  const panel = document.getElementById("dashboardPanel");
+  const focusable = Array.from(panel.querySelectorAll(FOCUSABLE));
+  if (!focusable.length) return;
+  if (e.key === "Escape") {
+    closeDashboard();
+    return;
+  }
+  if (e.key === "Tab") {
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  }
+}
+
 function openDashboard() {
-  document.getElementById("dashboardPanel").classList.add("is-open");
+  _dashboardOpener = document.activeElement;
+  const panel = document.getElementById("dashboardPanel");
+  panel.classList.add("is-open");
   document.getElementById("dashboardOverlay").classList.add("is-open");
   renderProgressList();
+  const first = panel.querySelector(FOCUSABLE);
+  if (first) first.focus();
+  document.addEventListener("keydown", _dashboardKeyHandler);
 }
 
 function closeDashboard() {
   document.getElementById("dashboardPanel").classList.remove("is-open");
   document.getElementById("dashboardOverlay").classList.remove("is-open");
+  document.removeEventListener("keydown", _dashboardKeyHandler);
+  if (_dashboardOpener) { _dashboardOpener.focus(); _dashboardOpener = null; }
 }
 
 function renderProgressList() {
@@ -352,6 +397,7 @@ function handleImportFile(e) {
   reader.onload = ev => {
     try {
       const data = JSON.parse(ev.target.result);
+      if (typeof data !== "object" || data === null || Array.isArray(data)) throw new Error();
       writeSave(data);
       if (data.name) document.getElementById("userName").value = data.name;
       renderProgressList();

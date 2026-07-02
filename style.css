@@ -646,7 +646,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -873,6 +873,13 @@ body {
     margin-top: 1.75rem;
   }
 
+  /* 5th card alone in last row — center it */
+  .entry-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.25rem);
+    justify-self: center;
+  }
+
   .entry-card {
     padding: 1rem 0.75rem;
   }
@@ -913,5 +920,18 @@ body {
 
   .hero-year {
     font-size: clamp(2.5rem, 20vw, 4rem);
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
